@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : Backend TypeScript Convention</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="31686657.html">개발</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Convention_40009742.html">Convention</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : Backend TypeScript Convention
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 고주형</span> on 7월 29, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>백엔드 TypeScript 코드는 아래와 같은 룰을 준수합니다.</p><ul><li><p>출처: <a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md" data-card-appearance="inline" class="external-link" rel="nofollow">https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md</a> </p></li></ul><hr/><h1 id="BackendTypeScriptConvention-TypeScriptStyleGuideandCodingConventions">TypeScript Style Guide and Coding Conventions</h1><p>People have asked me for my opinions on this. Personally I don't enforce these a lot on my teams and projects but it does help to have these mentioned as a tiebreaker when someone feels the need to have such strong consistency. There are other things that I feel much more strongly about and those are covered in the <a href="https://github.com/basarat/typescript-book/blob/master/docs/tips/main.md" class="external-link" rel="nofollow">tips chapter</a> (e.g. type assertion is bad, property setters are bad) 🌹.</p><h4 id="BackendTypeScriptConvention-KeySections:">Key Sections:</h4><ul><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#variable-and-function" class="external-link" rel="nofollow">Variable</a></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#class" class="external-link" rel="nofollow">Class</a></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#interface" class="external-link" rel="nofollow">Interface</a></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#type" class="external-link" rel="nofollow">Type</a></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#namespace" class="external-link" rel="nofollow">Namespace</a></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#enum" class="external-link" rel="nofollow">Enum</a></p></li><li><p><code>null</code> vs. <code>undefined</code></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#formatting" class="external-link" rel="nofollow">Formatting</a></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#quotes" class="external-link" rel="nofollow">Single vs. Double Quotes</a></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#spaces" class="external-link" rel="nofollow">Tabs vs. Spaces</a></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#semicolons" class="external-link" rel="nofollow">Use semicolons</a></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#array" class="external-link" rel="nofollow">Annotate Arrays as </a><code>Type[]</code></p></li><li><p><a href="https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md#filename" class="external-link" rel="nofollow">File Names</a></p></li><li><p><code>type</code> vs <code>interface</code></p></li><li><p><code>==</code> or <code>===</code></p></li></ul><h2 id="BackendTypeScriptConvention-VariableandFunction">Variable and Function</h2><ul><li><p>Use <code>camelCase</code> for variable and function names</p></li></ul><blockquote><p>Reason: Conventional JavaScript</p></blockquote><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">var FooVar;
+function BarFunc() { }</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">var fooVar;
+function barFunc() { }</pre>
+</div></div><h2 id="BackendTypeScriptConvention-Class">Class</h2><ul><li><p>Use <code>PascalCase</code> for class names.</p></li></ul><blockquote><p>Reason: This is actually fairly conventional in standard JavaScript.</p></blockquote><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">class foo { }</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">class Foo { }</pre>
+</div></div><ul><li><p>Use <code>camelCase</code> of class members and methods</p></li></ul><blockquote><p>Reason: Naturally follows from variable and function naming convention.</p></blockquote><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">class Foo {
+    Bar: number;
+    Baz() { }
+}</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">class Foo {
+    bar: number;
+    baz() { }
+}</pre>
+</div></div><h2 id="BackendTypeScriptConvention-Interface">Interface</h2><ul><li><p>Use <code>PascalCase</code> for name.</p></li></ul><blockquote><p>Reason: Similar to class</p></blockquote><ul><li><p>Use <code>camelCase</code> for members.</p></li></ul><blockquote><p>Reason: Similar to class</p></blockquote><ul><li><p><strong>Don't</strong> prefix with <code>I</code></p></li></ul><blockquote><p>Reason: Unconventional. <code>lib.d.ts</code> defines important interfaces without an <code>I</code> (e.g. Window, Document etc).</p></blockquote><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">interface IFoo {
+}</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">interface Foo {
+}</pre>
+</div></div><h2 id="BackendTypeScriptConvention-Type">Type</h2><ul><li><p>Use <code>PascalCase</code> for name.</p></li></ul><blockquote><p>Reason: Similar to class</p></blockquote><ul><li><p>Use <code>camelCase</code> for members.</p></li></ul><blockquote><p>Reason: Similar to class</p></blockquote><h2 id="BackendTypeScriptConvention-Namespace">Namespace</h2><ul><li><p>Use <code>PascalCase</code> for names</p></li></ul><blockquote><p>Reason: Convention followed by the TypeScript team. Namespaces are effectively just a class with static members. Class names are <code>PascalCase</code> =&gt; Namespace names are <code>PascalCase</code></p></blockquote><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">namespace foo {
+}</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">namespace Foo {
+}</pre>
+</div></div><h2 id="BackendTypeScriptConvention-Enum">Enum</h2><ul><li><p>Use <code>PascalCase</code> for enum names</p></li></ul><blockquote><p>Reason: Similar to Class. Is a Type.</p></blockquote><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">enum color {
+}</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">enum Color {
+}</pre>
+</div></div><ul><li><p>Use <code>PascalCase</code> for enum member</p></li></ul><blockquote><p>Reason: Convention followed by TypeScript team i.e. the language creators e.g <code>SyntaxKind.StringLiteral</code>. Also helps with translation (code generation) of other languages into TypeScript.</p></blockquote><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">enum Color {
+    red
+}</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">enum Color {
+    Red
+}</pre>
+</div></div><h2 id="BackendTypeScriptConvention-Nullvs.Undefined">Null vs. Undefined</h2><ul><li><p>Prefer not to use either for explicit unavailability</p></li></ul><blockquote><p>Reason: these values are commonly used to keep a consistent structure between values. In TypeScript you use <em>types</em> to denote the structure</p></blockquote><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">let foo = { x: 123, y: undefined };</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">let foo: { x: number, y?: number } = { x:123 };</pre>
+</div></div><ul><li><p>Use <code>undefined</code> in general (do consider returning an object like <code>{valid:boolean, value?:Foo}</code> instead)</p></li></ul><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">return null;</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">return undefined;</pre>
+</div></div><ul><li><p>Use <code>null</code> where it's a part of the API or conventional</p></li></ul><blockquote><p>Reason: It is conventional in Node.js e.g. <code>error</code> is <code>null</code> for NodeBack style callbacks.</p></blockquote><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">cb(undefined)</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">cb(null)</pre>
+</div></div><ul><li><p>Use <em>truthy</em> check for <strong>objects</strong> being <code>null</code> or <code>undefined</code></p></li></ul><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">if (error === null)</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">if (error)</pre>
+</div></div><ul><li><p>Use <code>== null</code> / <code>!= null</code> (not <code>===</code> / <code>!==</code>) to check for <code>null</code> / <code>undefined</code> on primitives as it works for both <code>null</code>/<code>undefined</code> but not other falsy values (like <code>''</code>, <code>0</code>, <code>false</code>) e.g.</p></li></ul><p><strong>Bad</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">if (error !== null) // does not rule out undefined</pre>
+</div></div><p><strong>Good</strong></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">if (error != null) // rules out both null and undefined</pre>
+</div></div><h2 id="BackendTypeScriptConvention-Formatting">Formatting</h2><p>The TypeScript compiler ships with a very nice formatting language service. Whatever output it gives by default is good enough to reduce the cognitive overload on the team.</p><p>Use <code>tsfmt</code> to automatically format your code on the command line. Also, your IDE (atom/vscode/vs/sublime) already has formatting support built-in.</p><p>Examples:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">// Space before type i.e. foo:&lt;space&gt;string
+const foo: string = &quot;hello&quot;;</pre>
+</div></div><h2 id="BackendTypeScriptConvention-Quotes">Quotes</h2><ul><li><p>Prefer single quotes (<code>'</code>) unless escaping.</p></li></ul><blockquote><p>Reason: More JavaScript teams do this (e.g. <a href="https://github.com/airbnb/javascript" class="external-link" rel="nofollow">airbnb</a>, <a href="https://github.com/feross/standard" class="external-link" rel="nofollow">standard</a>, <a href="https://github.com/npm/npm" class="external-link" rel="nofollow">npm</a>, <a href="https://github.com/nodejs/node" class="external-link" rel="nofollow">node</a>, <a href="https://github.com/angular/angular/" class="external-link" rel="nofollow">google/angular</a>, <a href="https://github.com/facebook/react" class="external-link" rel="nofollow">facebook/react</a>). It's easier to type (no shift needed on most keyboards). <a href="https://github.com/prettier/prettier/issues/1105" class="external-link" rel="nofollow">Prettier team recommends single quotes as well</a></p></blockquote><blockquote><p>Double quotes are not without merit: Allows easier copy paste of objects into JSON. Allows people to use other languages to work without changing their quote character. Allows you to use apostrophes e.g. <code>He's not going.</code>. But I'd rather not deviate from where the JS Community is fairly decided.</p></blockquote><ul><li><p>When you can't use double quotes, try using back ticks (`).</p></li></ul><blockquote><p>Reason: These generally represent the intent of complex enough strings.</p></blockquote><h2 id="BackendTypeScriptConvention-Spaces">Spaces</h2><ul><li><p>Use <code>2</code> spaces. Not tabs.</p></li></ul><blockquote><p>Reason: More JavaScript teams do this (e.g. <a href="https://github.com/airbnb/javascript" class="external-link" rel="nofollow">airbnb</a>, <a href="https://github.com/rwaldron/idiomatic.js" class="external-link" rel="nofollow">idiomatic</a>, <a href="https://github.com/feross/standard" class="external-link" rel="nofollow">standard</a>, <a href="https://github.com/npm/npm" class="external-link" rel="nofollow">npm</a>, <a href="https://github.com/nodejs/node" class="external-link" rel="nofollow">node</a>, <a href="https://github.com/angular/angular/" class="external-link" rel="nofollow">google/angular</a>, <a href="https://github.com/facebook/react" class="external-link" rel="nofollow">facebook/react</a>). The TypeScript/VSCode teams use 4 spaces but are definitely the exception in the ecosystem.</p></blockquote><h2 id="BackendTypeScriptConvention-Semicolons">Semicolons</h2><ul><li><p>Use semicolons.</p></li></ul><blockquote><p>Reasons: Explicit semicolons helps language formatting tools give consistent results. Missing ASI (automatic semicolon insertion) can trip new devs e.g. <code>foo() \n (function(){})</code> will be a single statement (not two). TC39 <a href="https://github.com/tc39/ecma262/pull/1062" class="external-link" rel="nofollow">warning on this as well</a>. Example teams: <a href="https://github.com/airbnb/javascript" class="external-link" rel="nofollow">airbnb</a>, <a href="https://github.com/rwaldron/idiomatic.js" class="external-link" rel="nofollow">idiomatic</a>, <a href="https://github.com/angular/angular/" class="external-link" rel="nofollow">google/angular</a>, <a href="https://github.com/facebook/react" class="external-link" rel="nofollow">facebook/react</a>, <a href="https://github.com/Microsoft/TypeScript/" class="external-link" rel="nofollow">Microsoft/TypeScript</a>.</p></blockquote><h2 id="BackendTypeScriptConvention-Array">Array</h2><ul><li><p>Annotate arrays as <code>foos: Foo[]</code> instead of <code>foos: Array&lt;Foo&gt;</code>.</p></li></ul><blockquote><p>Reasons: It's easier to read. It's used by the TypeScript team. Makes easier to know something is an array as the mind is trained to detect <code>[]</code>.</p></blockquote><h2 id="BackendTypeScriptConvention-Filename">Filename</h2><p>Name files with <code>camelCase</code>. E.g. <code>accordion.tsx</code>, <code>myControl.tsx</code>, <code>utils.ts</code>, <code>map.ts</code> etc.</p><blockquote><p>Reason: Conventional across many JS teams.</p></blockquote><h2 id="BackendTypeScriptConvention-typevs.interface">type vs. interface</h2><ul><li><p>Use <code>type</code> when you <em>might</em> need a union or intersection:</p></li></ul><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">type Foo = number | { someProperty: number }</pre>
+</div></div><ul><li><p>Use <code>interface</code> when you want <code>extends</code> or <code>implements</code> e.g.</p></li></ul><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">interface Foo {
+  foo: string;
+}
+interface FooBar extends Foo {
+  bar: string;
+}
+class X implements FooBar {
+  foo: string;
+  bar: string;
+}</pre>
+</div></div><ul><li><p>Otherwise use whatever makes you happy that day. I use <a href="https://www.youtube.com/watch?v=IXAT3If0pGI" class="external-link" rel="nofollow">type</a></p></li></ul><h2 id="BackendTypeScriptConvention-==or==="><code>==</code> or <code>===</code></h2><p>Both are <a href="https://www.youtube.com/watch?v=vBhRXMDlA18" class="external-link" rel="nofollow">mostly safe for TypeScript users</a>. I use <code>===</code> as that is what is used in the TypeScript codebase.</p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:04</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

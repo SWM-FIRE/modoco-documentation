@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : 2022-11-11 정원용 멘토님과의 멘토링 및 데모 영상 대본 준비</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="720918.html">데일리 회의록</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="90734599.html">11월</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : 2022-11-11 정원용 멘토님과의 멘토링 및 데모 영상 대본 준비
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 고주형</span>, last modified on 11월 11, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-Index"><img class="emoticon emoticon-blue-star" data-emoji-id="1f50d" data-emoji-shortname=":mag:" data-emoji-fallback="🔍" src="images/icons/emoticons/72/1f50d.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Index</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1671113110548 {padding: 0px;}
+div.rbtoc1671113110548 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1671113110548 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1671113110548'>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-기능을보여주는것과제품을보여주는것은다르다'>기능을 보여주는 것과 제품을 보여주는 것은 다르다</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-일단우리제품릴리즈됨'>일단 우리 제품 릴리즈 됨</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-남은것'>남은 것</a></li>
+</ul>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-[중요]플라이웨잇캐시다프록시는캐시가아니다'>[중요] 플라이웨잇 캐시다 프록시는 캐시가 아니다</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-질문'>질문</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-HTTPProxy'>HTTP Proxy</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-[ForwardProxy]'>[Forward Proxy]</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-Client-&gt;Proxy-&gt;Internet-&gt;Server'>Client -&gt; Proxy -&gt; Internet -&gt; Server</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-[ReverseProxy]'>[Reverse Proxy]</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-다음주'>다음주</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-한부하테스트'>한 부하 테스트</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-요청수=TPS은아님'>요청 수 = TPS은 아님</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-홍보영상'>홍보 영상</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-영상Flow-패캠광고방식을따라가자'>영상 Flow - 패캠 광고 방식을 따라가자</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-영상대본'>영상 대본</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-인트로:“Hook포인트몇개편집해서짧게앞에넣자”'>인트로: “Hook 포인트 몇 개 편집해서 짧게 앞에 넣자”</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-질문1:모도코는어떤프로젝트인가요?'>질문1: 모도코는 어떤 프로젝트인가요?</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-질문2:모도코를왜만드셨나요?←(간단하게스크롤내리면서둘러보는)'>질문2: 모도코를 왜 만드셨나요? ← (간단하게 스크롤 내리면서 둘러보는)</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-질문3:근데이름이왜모도코죠?←(랜딩페이지스크롤내리기)'>질문3: 근데 이름이 왜 모도코죠? ← (랜딩 페이지 스크롤 내리기)</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-질문3:모도코를어떻게활용하고계시나요?←(여기서실제프로덕트영상)'>질문3: 모도코를 어떻게 활용하고 계시나요? ← (여기서 실제 프로덕트 영상)</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-마지막질문:앞으로방향성은어떻게되시나요?'>마지막 질문: 앞으로 방향성은 어떻게 되시나요?</a></li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-FADEOUT'>FADE OUT</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-가능한답변지'>가능한 답변지</a></li>
+</ul>
+</div><h2 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-Date"><img class="emoticon emoticon-blue-star" data-emoji-id="1f5d3" data-emoji-shortname=":calendar_spiral:" data-emoji-fallback="\uD83D\uDDD3" src="images/icons/emoticons/72/1f5d3.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Date</h2><p style="margin-left: 30.0px;"><time datetime="2022-11-11" class="date-past">2022. 11. 11.</time> 의 회의록 마스터 :  <a class="confluence-userlink user-mention current-user-mention" data-username="5ae579319fcb1f22f34d33f2" data-account-id="5ae579319fcb1f22f34d33f2" href="https://swm-fire.atlassian.net/wiki/people/5ae579319fcb1f22f34d33f2?ref=confluence" target="_blank" data-linked-resource-id="524292" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">고주형</a>  </p><h2 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-Participants"><img class="emoticon emoticon-blue-star" data-emoji-id="1f465" data-emoji-shortname=":busts_in_silhouette:" data-emoji-fallback="\uD83D\uDC65" src="images/icons/emoticons/72/1f465.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Participants</h2><p><a href="https://swm-fire.atlassian.net/people/team/617ed1cd-4ae5-4e85-9116-fccd208cb50e" class="external-link" rel="nofollow">TEAM FIRE</a> (<a class="confluence-userlink user-mention current-user-mention" data-username="5ae579319fcb1f22f34d33f2" data-account-id="5ae579319fcb1f22f34d33f2" href="https://swm-fire.atlassian.net/wiki/people/5ae579319fcb1f22f34d33f2?ref=confluence" target="_blank" data-linked-resource-id="524292" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">고주형</a> <a class="confluence-userlink user-mention" data-username="62666f5a4297890069453757" data-account-id="62666f5a4297890069453757" href="https://swm-fire.atlassian.net/wiki/people/62666f5a4297890069453757?ref=confluence" target="_blank" data-linked-resource-id="196617" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">윤영기</a> <a class="confluence-userlink user-mention" data-username="62666f5934b9b7006879b22b" data-account-id="62666f5934b9b7006879b22b" href="https://swm-fire.atlassian.net/wiki/people/62666f5934b9b7006879b22b?ref=confluence" target="_blank" data-linked-resource-id="196611" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">이하령</a>) + <a class="confluence-userlink user-mention" data-username="70121:412dbc3f-d7b9-4f3c-9dc7-03442e8a60a3" data-account-id="70121:412dbc3f-d7b9-4f3c-9dc7-03442e8a60a3" href="https://swm-fire.atlassian.net/wiki/people/70121:412dbc3f-d7b9-4f3c-9dc7-03442e8a60a3?ref=confluence" target="_blank" data-linked-resource-id="12255254" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">WonYong Jeong</a> </p><h2 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-Discussiontopics"><img class="emoticon emoticon-blue-star" data-emoji-id="1f5e3" data-emoji-shortname=":speaking_head:" data-emoji-fallback="\uD83D\uDDE3" src="images/icons/emoticons/72/1f5e3.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Discussion topics</h2><h3 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-기능을보여주는것과제품을보여주는것은다르다">기능을 보여주는 것과<br/>제품을 보여주는 것은 다르다 </h3><ul><li><p>어떤 상황<br/>-&gt; 이 기능<br/>-&gt; 적절<br/>   == 심사위원 공감 </p></li></ul><p>심사위원 아 이런 상황 있을 수 있지<br/>이런 상황일 때 이게 유용하겠구나!<br/>기능이 아닌 제품의 관점 </p><p>그 자리에 준비 안하면 </p><ul><li><p>이거 됩니다. 이거 됩니다.<br/>= 노잼</p></li></ul><hr/><p>홍보 영상 </p><hr/><p>담주에 보고서 </p><ul><li><p>수 </p></li></ul><p>발표 </p><ul><li><p>기말 자료</p></li></ul><hr/><h3 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-일단우리제품릴리즈됨">일단 우리 제품 릴리즈 됨</h3><p> 새로운 태스크 안 만듦<br/> 제품 릴리즈는 마무리 </p><h3 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-남은것">남은 것</h3><p> 이 시점부터 데모 준비 = 기말<br/> 데모 준비<br/> 애초에 기말 자료 + 데모를 위한 준비 = 이번주 담주<br/>   =&gt; 다음주 멘토링할 때 발표 자료 초안으로 공유</p><hr/><p>시연 방 목록 그대로?</p><ul><li><p>지금으로 </p></li></ul><p>지표를 넣자 !</p><ul><li><p>여러가지 관점 </p></li><li><p>과연 될까?</p></li><li><p>초기 유입의 리텐션은 이루어질까?</p></li><li><p>유입하면 어떤 동기를 가져갈 수 있을까?</p><ul><li><p>해소는 못해도 (심사위원에게 너희가 맞아!)</p></li></ul></li></ul><p>누구나 공감하고 있는 방향의 고도화</p><ul><li><p>실제 릴리즈 사용자 데이터 모임!<br/>= 홈페이지 정보 = 내부 생산이 아닌 직접적으로 만든 데이타야!  </p><ul><li><p>어떤어떤 지표 </p><ul><li><p>부하는 어땠구</p></li><li><p>사람들이 생각보다 리텐션 유발 엑스 = 문제 이거다!</p></li></ul></li></ul></li></ul><p>-&gt; 심사위원<br/>-&gt; 강의자</p><p>Next에 대한 것이 짐작이 아니라 데이타 기반이다!</p><hr/><p>공유자원을 관리하기 위함<br/>두 패턴을 ㅇ</p><p>===</p><p>플라이웨잇 = 레이지 이벨류에이션<br/>Caching = Flyweight, Proxy는 아니다 </p><hr/><h2 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-[중요]플라이웨잇캐시다프록시는캐시가아니다">[중요]<br/>플라이웨잇 캐시다<br/>프록시는 캐시가 아니다</h2><p>우리 책예시가 혼란을 주고 있다... 조심하자 </p><hr/><p>프록시 패턴 </p><ul><li><p>저기 필요한 객체 하나줄래?</p></li></ul><hr/><p>어떤 차이야?</p><ul><li><p>Flyweight: 클라이언트가 팩토리 통해서 써</p></li><li><p>Proxy: 클라이언트가 프록시를 통해서 써</p></li></ul><p>Flyweight </p><ul><li><p>성능 관점 </p></li><li><p>원본을 본다</p></li><li><p>대리자가 중요한 것이 아니라 성능 고도화를 하는 것이 목표</p></li></ul><p>프록시</p><ul><li><p>대리자다 </p><ul><li><p>대리자 != 성능</p></li></ul></li><li><p>대리자는 원본을 못 본다  </p></li></ul><hr/><h3 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-질문">질문</h3><p>플라이웨잇이 릴리즈는 언제할까?</p><ul><li><p>풀</p><ul><li><p>릴리즈 </p></li><li><p>헤비 릴리즈는 언제해?</p></li></ul></li></ul><ol start="1"><li><p>HTTP Proxy는 언제 릴리즈?</p><ul><li><p>Purge 요청 = 요청 휘발</p><ul><li><p>Purge는 지금 한다는 것</p></li><li><p>API를 하나 파주자.</p></li></ul></li><li><p>꼭 API가 호출되어야 해제 돼..?<br/>ㄴㄴ. 운영 가능하려면 어떤 룰 필요</p><ul><li><p>시간 (가장 쉬워)<br/>캐시 만료 keep alive = 3600</p><ul><li><p>시간 딱 정하면 변조 안 됨 </p></li></ul></li><li><p>명시적 aPI</p></li><li><p>카운팅 </p><ul><li><p>100쓰면 날려 </p></li><li><p>상태를 가지게 됨</p><ul><li><p>계속 카운트 올려야 해</p></li></ul></li></ul></li></ul></li></ul></li></ol><p>게임의 캐시는 </p><ul><li><p>보통 게임은 점검 시간 있음. </p><ul><li><p>이때 날림. </p></li><li><p>그 다음 에이징 작업을 한다. </p><ul><li><p>에이징 = Preload한다</p></li></ul></li></ul></li></ul><p>운영 서비스는 점검 시간을 두고 한다.<br/>그렇지 않으면 운영자가 날려주는 시간을 수동으로 가진다 </p><p>쇼핑몰에 이미지 올림. 잘 못 됨. </p><ul><li><p>수정한 게 안 바뀜<br/>=&gt; CS요청 폭주 </p><ul><li><p>어디는 Purge 개발팀, 어디는 직접 직원이<br/>다 정책 다름. </p></li></ul></li></ul><hr/><h3 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-HTTPProxy">HTTP Proxy </h3><p>HTTP Proxy를 해석할 수 있어야 한다</p><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-[ForwardProxy]">[Forward Proxy]</h4><h5 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-Client-&gt;Proxy-&gt;Internet-&gt;Server">Client -&gt; Proxy -&gt; Internet -&gt; Server</h5><ul><li><p>원본 서버보다 앞 </p></li><li><p>클라이언트 입장에서 앞으로 간다</p></li></ul><p>클라 요청이 많아.  </p><ul><li><p>동일 요청은 프록시가 보내지 않을 수도 있다</p></li><li><p>포워드 프록시가 분산시켜줄 수 있다</p></li></ul><p>클라 입장</p><ul><li><p>프록시가 분산이든 캐시든 </p></li><li><p>뒷단에서 실제 요청이 갔는지 안 갔는지 클라가 몰라도 됨<br/>= 로드 밸런싱 </p><ul><li><p>로드 밸런싱은 캐쉬는 아니다</p></li></ul></li><li><p>고도화되면 얘기 캐시역할을 하기도 한다.</p></li></ul><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-[ReverseProxy]">[Reverse Proxy]</h4><ul><li><p>내가 가져온 것</p></li><li><p>클라이언트 입장에서 뒤로</p></li><li><p>목적이 캐쉬이다.</p></li><li><p>원본에서 가져온 것을 캐쉬하다가 준다. </p></li></ul><hr/><p>네트워크 상에서 흔히 사용가능한 도구 중 프록시 많음 </p><ul><li><p>VPN </p><ul><li><p>암호화의 책임은 없음</p></li><li><p>사설 네트워크를 구축하는 것. </p><ul><li><p>허용된 사람끼리 통신하도록 하는 것</p></li><li><p>내 IP를 속일 수 있음 </p></li></ul></li></ul></li><li><p>ex. 내가 회사망 접속 </p><ul><li><p>회사망 접속 후 네이버 가면 내 IP가 속여짐</p></li><li><p>Virtual Private망</p></li><li><p>내의 네트워크 활동을 완벽히 대리 = 프록시이다.</p></li></ul></li></ul><p>프록시 = 캐시는 아니다.<br/>대리자이다.</p><hr/><p>만약 리버스 프록시입장에서 캐쉬 Hit<br/> =&gt; HTTP 응답:  3백번대: 304 Not Modified<br/> 304가 오면?</p><ul><li><p>클라이언트는 </p></li></ul><p>200 OK</p><ul><li><p>Content Length : 40000<br/>304 </p></li><li><p>Content Length : 0<br/>= 클라야 넌 이미 가지고 있어<br/>= 클라입장에서 서버한테<br/>     GET /index.html<br/>     accept: *<br/>     If-Modified-Since: 시간<br/>=&gt; 서버가 If-Modified-Since보면서 변경 너 IMS있어? 그럼 304줄게<br/>      - 어? 구버전임? 그럼 Last-Modified랑 200줄게 </p></li></ul><hr/><p>CPU 하이<br/>  =&gt; 서버가 에어컨으로부터 멈</p><hr/><p>동기화 = 락임<br/>inner static class initer     <br/>해결 방안 1.<br/>  double checked locking </p><p>해결 방안 2.<br/>  Hash Table을 쓴다 </p><ul><li><p>HashMap </p></li><li><p>빠름</p></li><li><p>스레드 safe하지 않음 </p></li><li><p>Thread Safe한 HashTable을 쓰자 </p></li><li><p>대신 좀 느림 </p></li></ul><hr/><h3 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-다음주">다음주</h3><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-한부하테스트">한 부하 테스트</h4><p>1000개 메인 페이지</p><ul><li><p>정적 말 S3 </p></li></ul><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-요청수=TPS은아님">요청 수 = TPS은 아님</h4><ul><li><p>부하테스트 한번 하고 같이 해석 해보자</p></li><li><p>서버의 스케일 아웃까지 고려했다는 데이터로 삼으려 하는 것이다.<br/>=&gt; 심사위원 어필: 너희들이 잘 만드는 것은 했다.</p></li><li><p>발표 자료 초안 보자</p><ul><li><p>목차라도 보자!</p></li></ul></li><li><p>가장 먼저 데모를 만들자!</p></li></ul><hr/><h2 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-홍보영상">홍보 영상</h2><h3 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-영상Flow-패캠광고방식을따라가자">영상 Flow - 패캠 광고 방식을 따라가자</h3><ul><li><p>#인트로 : “훅 포인트 몇 개 편집해서 짧게 앞에 넣는 것”</p></li><li><p>#1 : 질문 - 답변 </p></li><li><p>#2 : 질문 - 답변 </p></li><li><p>#3 : 질문 - 답변 </p></li><li><p>#4 : …</p></li><li><p>#마지막 : 더 자세한 내용은 링크를 남겨두었으니 유튜브 설명을 참고해주세요.</p></li></ul><hr/><h3 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-영상대본">영상 대본 </h3><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-인트로:“Hook포인트몇개편집해서짧게앞에넣자”">인트로: “Hook 포인트 몇 개 편집해서 짧게 앞에 넣자”</h4><blockquote><p>기간: “질문:답변” → 1분치 - 짧게 </p></blockquote><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-질문1:모도코는어떤프로젝트인가요?">질문1: 모도코는 어떤 프로젝트인가요? </h4><p>요즘 개발자들 사이에서 모여서 각자 코딩하는 모각코 활동이 유행합니다. 이런 활동을 온라인 상에서 즐길 수 있게 도와주는 프로젝트입니다.</p><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-질문2:모도코를왜만드셨나요?←(간단하게스크롤내리면서둘러보는)">질문2: 모도코를 왜 만드셨나요? ← (간단하게 스크롤 내리면서 둘러보는)</h4><p><span style="color: rgb(0,102,68);">요새 개발자 붐이라고 하잖아요.(이게 앞의 hook 포인트로 사용됨)</span> <br/> 다른 개발자들은 무엇을 하고 있는지 <br/> 혹은 내가 짠 코드가 맞는지 <br/>서로 리뷰해주는 공간이 필요하다고 생각했어요.</p><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-질문3:근데이름이왜모도코죠?←(랜딩페이지스크롤내리기)"><del>질문3: 근데 이름이 왜 모도코죠? ← (랜딩 페이지 스크롤 내리기)</del></h4><p><del>모도코는 모여서 도란도란 코딩하다의 준말인데요. 정적이고 재미없는 분위기 말고 도란도란한 분위기 속에서 모각코를 진행하자! 라는 의미로 지은 이름입니다.</del></p><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-질문3:모도코를어떻게활용하고계시나요?←(여기서실제프로덕트영상)">질문3: 모도코를 어떻게 활용하고 계시나요? ← (여기서 실제 프로덕트 영상)</h4><ol start="1"><li><p><span style="color: rgb(0,102,68);">(하령님) ← (스터디한 영상 주말 주심)</span><br/><em>다들 스터디 많이 하시잖아요. 취업 스터디, 면접 스터디, cs 스터디 등등.. 저희도 모도코에서 이런 <span style="color: rgb(0,102,68);">스터디를 하고 있어요</span>.</em> 아주 만족하며 사용하고 있습니다ㅎㅎ</p></li><li><p>(영기님) 실제로 제가 모도코에서 개발을 혼자 하고있었는데, <span style="color: rgb(0,102,68);">IT 현직자분께서 들어오셔서 코드 리뷰</span>를 해주신 경험도 있습니다. ← (실제로 한 영상 보여주며)</p></li></ol><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-마지막질문:앞으로방향성은어떻게되시나요?">마지막 질문: 앞으로 방향성은 어떻게 되시나요?</h4><p>실제로 많은 사람들이 여러 개발자를 만나며 도움을 많이 얻어 갔으면 좋겠습니다.</p><h4 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-FADEOUT">FADE OUT </h4><ul><li><p>링크 추천</p></li><li><p>영상 추천</p></li></ul><hr/><h3 id="id-2022-11-11정원용멘토님과의멘토링및데모영상대본준비-가능한답변지">가능한 답변지 </h3><blockquote><p>[답변 예시]<br/>  요새 개발자붐이라고 그러죠~ 그만큼 코드리뷰도 많이하고, 네트워킹이 중요해졌는데 다들 멘토링이라하면서 엄청나게 돈을 받더라구요. <br/>  - 근데 충고나 간단히 봐주는 것 뿐인데 그렇게 돈이 많이 필요한 서비스인가? <br/>  - 한시간정도 안걸리는데 도와줄수 아닌가 싶었어요</p></blockquote><ul><li><p>다른 개발자들은 어떤걸 준비할까?</p></li><li><p>면접 같이 준비하실 분?</p></li><li><p>요즘 핫한 개발자들은 어떤 기술을 쓰지?</p></li><li><p>나랑 같이 스터디 하실 분?</p></li><li><p>내 코드 한번 봐주실 분?</p></li><li><p>간단한 C 정도는 나도 가르쳐줄 수 있을 것 같은데..</p></li></ul><hr/><p>1컷 : 모도코를 왜 만드셨나요?</p><p>혹시 모각코라는 단어를 아시나요? 모여서 각자 코딩하다의 준말인데요. 개발자들 사이에서 흔히 유행하는 단어에요. </p><p>보통 모각코를 하려면 다른 커뮤니티 사이트에서 모집을 하고 줌이나 디스코드에서 진행하거든요. 저희는 이러한 과정이 번거롭다고 생각했어요. 다른 사람들과 함께 코딩하고 싶을 때 그냥 모도코 사이트에 들어와서 다른 사람들과 자유롭게 모각코를 진행하면 어떨까? 이런 생각으로 만들었어요.</p><p>2컷: modoco 간단 사용서, flow (모도코 사용 방법)</p><p /><p>3컷: </p><p>마무리 멘트</p><p>링크 가리키기</p><span class="confluence-embedded-file-wrapper image-left-wrapper"><img class="confluence-embedded-image image-left" loading="lazy" src="attachments/92864513/93061140.png" data-image-src="attachments/92864513/93061140.png" data-height="3082" data-width="488" data-unresolved-comment-count="0" data-linked-resource-id="93061140" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="IMG_0064.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="92864513" data-linked-resource-container-version="7" data-media-id="31c74556-c9a3-439a-9e5b-205f7c0b7491" data-media-type="file"></span><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92864513/92864522.png">image-20221108-065443.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92864513/92864525.png">image-20220804-131608.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92864513/92864528.png">image-20221107-061459.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92864513/92864531.png">스크린샷 2022-10-23 오후 4.34.14-20221023-073416.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92864513/92864534.png">스크린샷 2022-11-07 오후 3.15.48-20221107-061608.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92864513/92864537.png">image-20221107-061701.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92864513/92864540.png">image-20221107-063928.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92864513/92864543.png">image-20221107-064527.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92864513/92864546.png">image-20221107-064904.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92864513/93061140.png">IMG_0064.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:05</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

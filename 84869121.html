@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : 2022-10-13 정원용 멘토님 멘토링</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="720918.html">데일리 회의록</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="84672513.html">10월</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : 2022-10-13 정원용 멘토님 멘토링
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 이하령</span>, last modified by <span class='editor'> 고주형</span> on 10월 13, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="id-2022-10-13정원용멘토님멘토링-Index"><img class="emoticon emoticon-blue-star" data-emoji-id="1f50d" data-emoji-shortname=":mag:" data-emoji-fallback="🔍" src="images/icons/emoticons/72/1f50d.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Index</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1671113097386 {padding: 0px;}
+div.rbtoc1671113097386 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1671113097386 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1671113097386'>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-10-13정원용멘토님멘토링-정원용멘토님멘토링'>정원용 멘토님 멘토링</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-10-13정원용멘토님멘토링-chainofresponsibility'>chain of responsibility</a></li>
+<li><a href='#id-2022-10-13정원용멘토님멘토링-Facade단순한창구'>Facade 단순한 창구</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-10-13정원용멘토님멘토링-주형버전'>주형 버전</a></li>
+<li><a href='#id-2022-10-13정원용멘토님멘토링-이벤트남은기간이슈에대한의사결정'>이벤트 남은 기간 이슈에 대한 의사결정</a></li>
+<li><a href='#id-2022-10-13정원용멘토님멘토링-조건이많더라도추상화가안되면이것을못쓴다.'>조건이 많더라도 추상화가 안 되면 이것을 못 쓴다.</a></li>
+<li><a href='#id-2022-10-13정원용멘토님멘토링-util,helper,common조각함수되면똑같아Util?'>util, helper, common 조각 함수되면 똑같아 Util?</a></li>
+</ul>
+</div><h2 id="id-2022-10-13정원용멘토님멘토링-Date"><img class="emoticon emoticon-blue-star" data-emoji-id="1f5d3" data-emoji-shortname=":calendar_spiral:" data-emoji-fallback="\uD83D\uDDD3" src="images/icons/emoticons/72/1f5d3.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Date</h2><p style="margin-left: 30.0px;"><time datetime="2022-10-13" class="date-past">2022. 10. 13.</time> 의 회의록 마스터 :  <a class="confluence-userlink user-mention" data-username="62666f5934b9b7006879b22b" data-account-id="62666f5934b9b7006879b22b" href="https://swm-fire.atlassian.net/wiki/people/62666f5934b9b7006879b22b?ref=confluence" target="_blank" data-linked-resource-id="196611" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">이하령</a> </p><h2 id="id-2022-10-13정원용멘토님멘토링-Participants"><img class="emoticon emoticon-blue-star" data-emoji-id="1f465" data-emoji-shortname=":busts_in_silhouette:" data-emoji-fallback="\uD83D\uDC65" src="images/icons/emoticons/72/1f465.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Participants</h2><p><a href="https://swm-fire.atlassian.net/people/team/617ed1cd-4ae5-4e85-9116-fccd208cb50e" class="external-link" rel="nofollow">TEAM FIRE</a> (<a class="confluence-userlink user-mention current-user-mention" data-username="5ae579319fcb1f22f34d33f2" data-account-id="5ae579319fcb1f22f34d33f2" href="https://swm-fire.atlassian.net/wiki/people/5ae579319fcb1f22f34d33f2?ref=confluence" target="_blank" data-linked-resource-id="524292" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">고주형</a> <a class="confluence-userlink user-mention" data-username="62666f5a4297890069453757" data-account-id="62666f5a4297890069453757" href="https://swm-fire.atlassian.net/wiki/people/62666f5a4297890069453757?ref=confluence" target="_blank" data-linked-resource-id="196617" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">윤영기</a> <a class="confluence-userlink user-mention" data-username="62666f5934b9b7006879b22b" data-account-id="62666f5934b9b7006879b22b" href="https://swm-fire.atlassian.net/wiki/people/62666f5934b9b7006879b22b?ref=confluence" target="_blank" data-linked-resource-id="196611" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">이하령</a>) + <a class="confluence-userlink user-mention" data-username="70121:412dbc3f-d7b9-4f3c-9dc7-03442e8a60a3" data-account-id="70121:412dbc3f-d7b9-4f3c-9dc7-03442e8a60a3" href="https://swm-fire.atlassian.net/wiki/people/70121:412dbc3f-d7b9-4f3c-9dc7-03442e8a60a3?ref=confluence" target="_blank" data-linked-resource-id="12255254" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">WonYong Jeong</a> </p><h2 id="id-2022-10-13정원용멘토님멘토링-Discussiontopics"><img class="emoticon emoticon-blue-star" data-emoji-id="1f5e3" data-emoji-shortname=":speaking_head:" data-emoji-fallback="\uD83D\uDDE3" src="images/icons/emoticons/72/1f5e3.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Discussion topics</h2><h2 id="id-2022-10-13정원용멘토님멘토링-정원용멘토님멘토링">정원용 멘토님 멘토링</h2><h1 id="id-2022-10-13정원용멘토님멘토링-이벤트">이벤트</h1><p /><p>헥토버페스트</p><hr/><ul><li><p>사람들이 참여하려면 동기여부가 필요할 것 같다.</p></li><li><p>모도코를 이용해서 이벤트 참여하는건 가치 있을 것 같은데 단순히 모도코에 기여하는것은 소마 관점에서 도움이 안될 것 같다.</p></li><li><p>아이디어는 수면 위에 올려두고 여기에서 파생해서 좀 더 고민 필요할 듯</p></li><li><p>주형님이 강의 열고 사용자들 이용 유도 → 그리고 같이 헥토버페스트 참여 ?</p></li></ul><p>사람들이 공부한것을 자동으로 캡쳐해서 자신의 피드에 올릴 수 있게</p><p /><p /><p>코드리뷰 이벤트</p><hr/><ul><li><p>몇개의 코드리뷰 이벤트를 만들고 사람들이 참여하게 한다.</p></li><li><p>이벤트를 만들 수 있는 신청을 받는다.</p></li><li><p>A가 코드리뷰 이벤트에 참여하겠다고 신청하고 A의 지인 혹은 모르는 사람들에게 코드리뷰를 받는다면?</p></li><li><p>코드리뷰 받는 사람과 하는 사람 매칭?</p></li></ul><p>→ 목적: 사용자들에게 사용기를 받는다</p><p /><p /><h1 id="id-2022-10-13정원용멘토님멘토링-디자인패턴">디자인패턴</h1><h3 id="id-2022-10-13정원용멘토님멘토링-chainofresponsibility">chain of responsibility</h3><hr/><p>handler는 자기 자신을 위임</p><p>: 다음의 핸들러를 위임한다!</p><p>문제 상황을 추상화 하는게 먼저.</p><p>그런 문제들은 단순 하드코딩 되어있지 않을 것.</p><p>(실제에서 사용할 땐 외부에서 조건들이 주입될 것.)</p><p>그래서 단순 조건문으로 (if) 표현될 수 없을 것.</p><h3 id="id-2022-10-13정원용멘토님멘토링-Facade단순한창구">Facade 단순한 창구</h3><hr/><p>이거 왜써?</p><ul><li><p>main이 쉽게 프로그래밍 하기 위해</p></li></ul><p>퍼사드에서 이야기하는 subsystem은 서트파티 모듈이나 다른 패키지</p><p>퍼사드는 써드파티에서 제공하는 무언가를 사용하기 쉽게 만들어주는 역할.</p><p>오픈소스 버전업할때마다 반영해야 된다… 오픈소스 버전업할때 다 수정하는건 넘 힘들고….. facade만 수정하면 되낟.</p><p>퍼사드는 써드파티에 대해 단순화 시키면서 써드파티의 운영 책임을 갖게 된다. 그럼 클라는 써드파티의 복잡도를 아예 모르고 운영해도 된다.</p><p>서브 시스템을 넓은 단위로 바라봐야 한다! (패키지 이상의 모듈)</p><p>브릿지 패턴은 기능과 구현을 분리시켜 브릿지화 (클라는 기능에 대해서만 파악하면 됨.)</p><p>브릿지의 범위는 내 코드에 대한 리팩토링.</p><p>퍼사드가 지향하는 것은 외부 코드를 단순화 시킬 수있는 창구</p><p>→ 누구를 단순화 시키는지가 다름</p><p>어댑터는 소프트웨어가 릴리즈 되어서 이미 동작하는 상태의 버전을 새로운 코드로 전환할수 없을때!</p><p>피쳐가 바뀌었고 버전이 바뀌었는데 과거 레거시를 바꾸는 행위가 리스크가 있을때 어댑터로 감싸주고 새로운 피처로 전환!</p><p>즉, 어댑터는 우리 프로젝트의 버전업! (어댑터는 레거시가 있음)</p><p>어댑터는 같은 플젝 레거시를 감싼다.</p><p>퍼사드는 최대한 써드파티를 보존하면서 가줘야 한다.</p><p>퍼사드, 어떤 관점으로 봐야해?</p><ul><li><p>서브시스템. 규모가 있고 스스로 버전업 하는 것</p><ul><li><p>‘내’가 하지 않는 버전업</p></li></ul></li></ul><hr/><hr/><h2 id="id-2022-10-13정원용멘토님멘토링-주형버전">주형 버전</h2><p /><p>알든 모르든 사람들이 모여서 할 수 있다.</p><p>공감대를 얻을 수 있는<br/>모도코드</p><p>헥토버 페스트  = 수단</p><p>modocode -&gt; 매일마다 코드 조각, 알고리즘 공부, 모도코드를 통해서 하자</p><ul><li><p>자기들끼리 이용하드라! = 통계로 잡힘</p></li></ul><p>영상 공유함 -&gt; 피드로 남아야 해!<br/>[피드로 남아야 해!]<br/>1분에 한번 10분에 한번 서버로 간다<br/>= 그 방에서 활동한 기록</p><p>남은 방<br/>= 게시판에 남은 글 한개<br/>= 피드가 하나</p><h2 id="id-2022-10-13정원용멘토님멘토링-이벤트남은기간이슈에대한의사결정">이벤트 남은 기간 이슈에 대한 의사결정</h2><p>모집</p><ul><li><p>디스코드</p></li><li><p>우리 서비스를 이용해서 코드 리뷰<br/>= 장면들이 남아있다<br/>= 실시간 서너명 코드리뷰<br/>= 우리끼리하는 모도코 코드 리뷰하는 것을 남기자 !</p></li></ul><p>코드리뷰해보자!</p><ul><li><p>자기가 이벤트를 신청하도록 해보자!</p></li><li><p>19일 코드리뷰 이벤트 해보자!</p></li><li><p>자기 친구들하고 코드리뷰</p></li><li><p>코드리뷰 피드백</p></li><li><p>개선사항을 짚어내자!</p></li><li><p>코드를 알려주고 싶은 내코드를 피드백 받고 싶은 사람</p></li></ul><p>유튜브로 우리가 하는 걸을 해주자</p><ul><li><p>코드 리뷰어 및 커미터를 연결해보자!</p></li><li><p>실제 가치를 느낄 수 있는지 시뮬레이션해보자!</p></li></ul><ol><li><p>모의 코드 리뷰</p></li></ol><ul><li><p>모도코를 유튜브로 찍고</p></li></ul><ol><li><p>PR 데이</p></li></ol><hr/><p>이럴 수 있다.<br/>코드리뷰 = 자기 코드 소개</p><p>한명</p><ol><li><p>코드 리뷰 하는 사람</p></li><li><p>코드 리뷰를 받는 사람</p></li></ol><p>비포 애프터를 명확하게 한다.</p><p>모도코를 통해 서로를 피드백해보자!</p><p>메인 bootstrap<br/>-&gt; 좋은 코드 -&gt; 스파게티 점진적</p><hr/><p>리액트 당근 개발자</p><ul><li><p>과거의 좋은 코드리뷰 경험 우리의 시나리오</p></li><li><p /></li></ul><p>유튜브에 올려<br/>-&gt; 우리의 홈페이지에 다가도 올리자!</p><hr/><p>회사 홈피 = 사람들의 사용기</p><ul><li><p>사람들의 사용기</p></li><li><p>유튜브, 댓글, 링크, 등</p></li></ul><hr/><p>이번 이벤트는 사용기를 받을 수 있는 이벤트</p><ul><li><p>어차피 소규모</p></li><li><p>이벤트 스샷</p><ul><li><p>보내 주는 사람들에게 보내줄 수 있으면 좋겠다.</p></li></ul></li></ul><p>결국 피드백을 산 것이다.</p><p>일단 일주일</p><p>모도코를 통해 코드리뷰 시도해보자</p><ul><li><p>처음 매칭</p></li><li><p>커미터와 리뷰어의 매칭 데이</p></li><li><p>요런 이벤트 참여해줘</p><ul><li><p>모도코 공부하면서 이런거 만들었고</p></li><li><p>우리가 예산이 있어. 너희들한테 줄게 이밴트 참여해줘!</p></li><li><p>공부하는 학생이야.<br/>&quot;회사가 아니니깐 오히려 오픈하자!&quot;</p></li></ul></li></ul><p>디코에 공부하면서 사람들에게 어떤 역할할지 손들어!</p><hr/><p>Chain of Responsibility</p><p>Handler가 자기를 가리킴<br/>next가 본인의 타입</p><ul><li><p>스스로를 위임하는 꼴 = 다음의 핸들러를 위임한다</p></li></ul><p>클라는 핸들러를 알면 돼</p><ul><li><p>실제로 핸들러만 알면 돼?</p><ul><li><p>ㄴㄴ</p></li></ul></li><li><p>메인은 concreteHandler를 안다.</p></li><li><p>메인 입장에서는 체인이 만들어졌다면 주입된 핸들러를 이용한다.</p></li></ul><p>다이어그램 상으로는 쉬움</p><p>버튼에서 이벤트 발생</p><ul><li><p>다음 다음으로 책임 넘어감</p></li></ul><p>내 질문</p><ul><li><p>체인은 클라가 만듦?</p></li><li><p>우리가 만들어제공</p></li></ul><p>중요한 것</p><ul><li><p>이벤트 같은 것</p><ul><li><p>이벤트 처리자가 각각 있는 것</p></li></ul></li><li><p>이벤트는 무엇인가?</p><ul><li><p>Trouble()임</p></li></ul></li><li><p>역할을 하는 support가 자기 역할을 하려면 문제의 상황을 정의해 줘야 해</p><ul><li><p>그래서 이벤트를 먼저 추상화해줘야 한다</p></li></ul></li></ul><p>클래스를 이용한 형상을 만드는 것은 쉬움<br/>근데 문제의 상황을 만는 것 자체가 선행 되지 않으면 안 된다.</p><p>핸들러 처리 조건문으로 처리하면 되지 않아? 복잡하게 만드는 것 아니야?</p><ul><li><p>첫번째. 트러블을 만들고 숫자 하나 넘겨주고 끝냄<br/>- 실제로는 단순 숫자가  아닌 컨택스트일 거임.<br/>- 컨텍스트? 화면의 좌표, 어떤 버튼, 스냅샷<br/>- 문제의 상황을 알려주고 처리할 수 있도록<br/>- 실제론 이 예제처럼 하드 코딩할 정도로 간단하진 않을 것</p></li></ul><p>[멘토님의 예제] 라우팅을 한다 해보자<br/>/route/a/d/e/f (O)<br/>/route/a</p><ul><li><p>보통 코드 짤 때 특정 Path 하나를 매칭하지 않음<br/>/route/a/d/e/f (X): 위의 프리픽스에 대해서 처리되어버려서 호출 안 됨. 이 핸들러로 넘어오지 않는다.<br/>/route/b<br/>/route/c</p></li></ul><p>위와 같은 조건들이 밖에 정의되어서 주입될 것이다.<br/>라우트 핸들러라는 것으로 개별적으로 객체화되어서 패스 조건에 맞는 것들이 연쇄적으로 next가 될 것이다.   ex) 조건이 안 맞아. next()</p><p>1, 그래서 문제의 상황을 만드는 것이 먼저<br/>2. 실제 문제는 외부에서 주입될 것이다.<br/>그렇기 때문에 단순 조건문으로는 안 된다.</p><hr/><h2 id="id-2022-10-13정원용멘토님멘토링-조건이많더라도추상화가안되면이것을못쓴다.">조건이 많더라도 추상화가 안 되면 이것을 못 쓴다.</h2><p>만약 이 패턴으로 조건문을 줄일 수 있다면 코딩에 조건문이 없을 것. 근데 실제로는 조건문을 못 없애.<br/>왜냐면 비교하는 것들이 단순 하나가 아니므로<br/>if (isFirstRan &amp;&amp; route == 'route/e')<br/>각각의 종속 변수 isFirstRan같은 것은 다 추상화하긴 불가능</p><p>[정리]<br/>외부에서 넘어온 것으로  핸들러를 만들 것이다,.<br/>예제처럼 처리할 수 있는 핸들러는 보통 이렇게 new로 만들어 쓰진 못할 것</p><p>실제로 가장 많이 사용하는 경우</p><ul><li><p>라우팅</p></li><li><p>URL  전처리</p></li></ul><hr/><p>Facade<br/>퍼사드는 왜 쓴느 걸까?</p><ul><li><p>클라이언트 관점에서 굉장히 쉬워진다.</p></li><li><p>레이어를 분리해서 PageMaker에</p><ul><li><p>메인의 책임의 범위가 줄어든다<br/>= 프로그래밍이 전체적으로 쉬워진다</p></li></ul></li><li><p>메인과 퍼사드는 같은 조직. 그래서 숨긴다는 의미는 별로 없을 수 있다.</p></li><li><p>추상화는 아니다.</p><ul><li><p>추상화 안 함. 추상화를 했으면 공통점이 나와서 뽑아와야 함.</p></li></ul></li></ul><p>퍼사드는 왜 써?<br/>어떨 때 퍼사드를 만들까?</p><p>유틸 헬퍼 퍼사드야?</p><p>주형이 피피티 첫 장</p><ul><li><p>서브 시스템을 퍼사드를 통해 단순화한다</p></li></ul><p>메일 발송은 서브 시스템인가?</p><ul><li><p>퍼사드에서 얘기하는 서브 시스템은 3rd party 혹은 다른 패키지이다.</p></li></ul><p>우리가 사용하는 Websocket이 써드 파티라면?</p><ul><li><p>웹소켓의 많은 기능이 있지만 우리가 다 쓰진 않아</p></li></ul><ul><li><p>Send Mail 유틸 메서드를 메일 발송 가능</p></li></ul><ul><li><p>써드 파티 모듈을 가져와서 걔네들을 가지고 와서 퍼사드로 만든 것</p></li></ul><p>퍼사드</p><ul><li><p>걍 코드 단순화 아님</p></li><li><p>서브시스템의 단순한 사용법임</p></li></ul><p>퍼사드에서 다른 패키들에 있는 것 가져와서 쓴다</p><p>[중요] 퍼사드는 써드 파티에 있는 무언가를 사용하기 쉽게 만들어 준다</p><p>메일 발송 모듈같은 경우</p><ul><li><p>AWS code를 단순화시킴<br/>=&gt; 퍼사드로 가능<br/>=&gt; 오픈 소스니 패키지를 변경하자<br/>- 여기에 Send Mail만들어서 쓰면 돼</p></li></ul><p>굳이 퍼사드 없이 클라가 메일 발송해도 돼.</p><ul><li><p>이러면 안 돼</p></li><li><p>왜?</p><ul><li><p>오픈소스가 수정될 때마다 우리가 수정해줘야 되기 떄문</p></li></ul></li></ul><p>우리가 써드 파티를 이용해주는 퍼사드만 갈아끼우면 돼</p><ul><li><p>클라까지 써드 파티 갈아끼우는 것에 대한 책임을 가지지 않아</p></li><li><p>퍼사드만 수정해주면 돼</p></li></ul><p>퍼사드는 같은 플젝의 복잡도 높은 조각을 단순화시키는 것이 아니다.</p><ul><li><p>퍼사드가 관리(운영) 책임을 가지며 단순화시키는 것</p></li><li><p>클라는 써드 파티 복잡도 모르고 운영 가능</p></li></ul><p>만약 주형이 코드?</p><ul><li><p>메일 발송 기능</p></li><li><p>한단계 단순화하면 퍼사드긴 해</p><ul><li><p>하나의 퍼사드 하나의 API 가능</p></li></ul></li></ul><p>내가 만든 모듈을 내가 복잡도를 낮추려면?</p><ul><li><p>퍼사드를 만들어야 돼? 아니야!</p><ul><li><p>이건 굳이 우리가 바꿀 수 있는 코드를 스펙화하는 행위</p></li></ul></li><li><p>당연히 클래스를 리팩터링하면 돼.</p><ul><li><p>스펙 버전 업하면 돼 (규격 바꿈)</p></li><li><p>외부 공개용이 아니게 때문에 스펙이 없잖아.</p></li></ul></li></ul><p>같은 플젝인데 옆에 팀에서 쓰는 것정도는 퍼사드로 만들 수 있어</p><ul><li><p>독자적으로 Versioning이 되고 있으니까 퍼사드로 만들 수 있어</p></li></ul><hr/><p>브릿지</p><ul><li><p>내 코드에 대한 리팩터링<br/>클라: 구현을 굳이 몰라도 기능만 알면돼<br/>기능이 구현을 씀</p></li></ul><hr/><p>어댑터랑 다른 점?</p><ul><li><p>어댑터는 소프트웨어가 릴리즈되어서 이미 동작 버전을 새로운 코드를 전환할 수 없을 때 쓴다.</p></li><li><p>우리 플젝의 버저닝에 관한 방법 중 하나.</p></li><li><p>레거시가 있다는 것<br/>피처가 바뀌고 버전이 바뀌었는데 과거의 코드를 바꿀 수 없을 때 쓰는것.</p></li></ul><p>어댑터의 대상은?</p><ul><li><p>같은 플젝 내의 과거 코드</p></li><li><p>규격이 다른 유형을 다른 (말그대로 어댑터 사용법)</p></li></ul><hr/><p>구조가 왜 달라?<br/>퍼사드는 최대한 써드파트를 보존하면서 가야돼<br/>브릿지 구현 맘대로 &lt;- 클라 관점에서 보는 것</p><hr/><p><a href="http://docs.oracle.com" data-card-appearance="inline" class="external-link" rel="nofollow">http://docs.oracle.com</a> <br/>jdbc driver?<br/>쓰려면? 커넥션 어캐해?</p><ul><li><p>드라이버 매니저에서 커넥션 가져와.<br/>커넥션을 통해 Stmt가져오고 쿼리 날리는 것로 끝!</p></li><li><p>그 사이는? Class.forName(&quot;oracle.jbdc.driver.OracleDriver&quot;)<br/>Class.forName(&quot;oracle.jbdc.driver.MySqlDriver&quot;) // Mysql이면</p></li></ul><p>Driver 매니저 뭐야?<br/>어떻게 클래스.forName로만 MySql로 연결되지?</p><p>자바 개발자: jdbc 규격만 알면 아무 디비 사용 가능</p><ul><li><p>자바 개발자 입장: 드라이버는 써드 파티</p><ul><li><p>어떻게 가져와야 할까?<br/>&quot;com.mysql.driver&quot;라는 클래스를 직접 보자<br/>NonRegisterDriver</p></li><li><p>static이넹?</p><ul><li><p>프로그램 시작될 때임.</p></li><li><p>그럼 언제 시작? 이걸 참조할 때이다.</p><ul><li><p>Class.forName(&quot;com.mysql.jdbc.Driver&quot;)를 참조할 때 com.mysql.jdbc.Drive의 클래스를 만듦</p></li><li><p>바이트코드를 로딩하는 시점이 객체를 생성해? 아니다.<br/>- 코드만 로딩하는 것</p></li><li><p>static은 bytecode가 로딩 될 때 불어와진다.</p></li></ul></li></ul></li></ul></li></ul><p>=&gt; 자바에서는 jdbc의 경우. DriverManager가 퍼사드다.<br/>외부 드라이버는 그 솔루션 제공자만 안다.<br/>개발자가 편하게 이용하려면?</p><ul><li><p>써드파티하고 클라를 연결하기 위해 퍼사드를 만들자</p></li><li><p>= DriverManager<br/>- 복잡도가 높다 = 네트워크 코넥, 코넥션으로 send recv하는 것이 다 여기에 있다<br/>- 퍼사드를 이용한 것이다!</p></li></ul><p>퍼사드는 어떤 기준</p><ul><li><p>서브시스템인가?<br/>= 규모가 있고 스스로 버저닝인가?<br/>= 옆 사람 모듈</p></li></ul><hr/><p><a href="http://www.yes24.com/Product/Goods/2745358" data-card-appearance="inline" class="external-link" rel="nofollow">http://www.yes24.com/Product/Goods/2745358</a> </p><ul><li><p>편집자 임성춘 대표. 정원용멘토님이 소개해줌</p></li></ul><h2 id="id-2022-10-13정원용멘토님멘토링-util,helper,common조각함수되면똑같아Util?">util, helper, common<br/>조각 함수되면 똑같아<br/>Util?</h2><p>Helper?</p><ul><li><p>헬퍼와 관련된 녀석은 그 폴더마다 있음.</p></li><li><p>폴더? 중간 그룹마다도 헬퍼를 따로 만든다.<br/>(예시)<br/>펑션 만들 때 이 단위의 기능을 만들기 위해 커먼이 있을 수 있어.<br/>구현이 같이 쓰는 커먼이 있고</p></li></ul><p>펑션이 같이 쓰는 커먼 가능</p><p>env management가 쓸 만한 커먼이 있고</p><p>사용하는 범위에 따라 따로 따로 구현.<br/>아니면 최상위에 헬퍼가 다 모이게 돼.</p><p>기능이 따라 공통 분모<br/>각각의 폴더 및 기능 별로 분리</p><p><a href="http://m2live.co.kr" class="external-link" rel="nofollow">m2live.co.kr</a></p><ul><li><p>회사 스펙</p></li><li><p>함수 하나하나가 다 솔루션급</p></li></ul><p>내일 동영상 가능하면 공유<br/>코드 리뷰 상황 추기적 회의 필요하면 말해줘!</p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/84869121/84869129.png">image-20220804-131608.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:04</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : 주형 개발 일기</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="69697539.html">개발 일기장</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : 주형 개발 일기
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 고주형</span>, last modified on 8월 31, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <blockquote><p>주형이의 개발 일기장</p></blockquote><hr/><p><time datetime="2022-08-29" class="date-past">2022. 8. 29.</time> 월요일 - 중간발표 이후 첫 개발일</p><ul><li><p>오후 1시 도착</p></li><li><p>내가 가져온 콜드브류 팀원들이랑 드링킹</p></li><li><p>일정 논의</p><ul><li><p>추석 때 어떻게 할지</p></li></ul></li><li><p>피그마 디자인 시안 회의</p></li><li><p>에픽 같이 짜기 </p></li><li><p>스토리 같이 짜기 </p></li><li><p>프로젝트 일정 조율</p><ul><li><p>다음주까지는 해커톤 이벤트 기획이 나와야 해!</p><ul><li><p>10월 2일 예정</p></li></ul></li><li><p>이걸 보고 달리자!</p></li></ul></li><li><p>보드게임 - 크라켄</p></li><li><p>3시간 <a href="https://swm-fire.atlassian.net/jira/software/projects/FIRE/boards/1?selectedIssue=FIRE-480" data-card-appearance="inline" class="external-link" rel="nofollow">https://swm-fire.atlassian.net/jira/software/projects/FIRE/boards/1?selectedIssue=FIRE-480</a> </p><ul><li><p>노션으로 매뉴얼 열심히 만듦</p></li></ul></li><li><p>소마 팀 인터뷰 하기로 함</p></li><li><p>3시간 엑스퍼트님과의 만남</p><ul><li><p>항아리보쌈 </p></li><li><p>스벅 디카페인 아아</p></li><li><p>엑스퍼트님 썰</p></li><li><p>21:40 끝</p></li></ul></li></ul><hr/><p><time datetime="2022-08-30" class="date-past">2022. 8. 30.</time> 화요일 - 10분 늦게 와서 국밥 먹은 날</p><ul><li><p>오후 1시 10분 도착</p></li><li><p>순대국밥 먹음</p></li><li><p>오후 1시 40분: 바나프레소 (지각비) 사서 센터 출근 </p></li><li><p>스크럼 </p></li><li><p>간단한 일정 논의</p></li><li><p>최진호멘토님과 정원용멘토님을 함께 보기로 함! L7 뷔페 예약!! 히히 - </p></li><li><p>오후 2시 30분 실질적인 개발 시작</p></li><li><p>enabled 속성을 쓰면 별도 소켓 이벤트 없이 stream on/off, audio mute/unmute 처리가 가능하지 않을까 싶었음</p></li><li><p>배권한 멘토님 내일 온라인 멘토링</p></li><li><p>4시간 <a href="https://swm-fire.atlassian.net/jira/software/projects/FIRE/boards/1?selectedIssue=FIRE-527" data-card-appearance="inline" class="external-link" rel="nofollow">https://swm-fire.atlassian.net/jira/software/projects/FIRE/boards/1?selectedIssue=FIRE-527</a> </p><ul><li><p>Websocket에도 type validation 넣으니깐 버그 생김</p></li></ul></li><li><p>오후 6시 30분쯤? 369팀이랑 센터 지하에 든든한 밥 집감 </p><ul><li><p>7000원 제육 먹음</p></li><li><p>막걸리 2병 서비스 받음 ㅎㅎ</p></li></ul></li><li><p>uid가 type은 string인데 실제로는 number여서 생긴 버그였음</p><ul><li><p>/users/me로 반환해주는 값이 number여서 프론트단에서 별도 체크 안하고 해서 생긴 버그</p></li><li><p>/users/me로 받는 uid를 .toString()으로 해서 string으로 state 저장해서 해결</p></li></ul></li><li><p>영기님 코딩하는 것 도와줌</p><ul><li><p>modal창이 떴을 때에 한해서 setInterval을 실행하고 싶은 상황</p><ul><li><p>전역 변수 쓰기 싫었음</p></li><li><p>useEffect 쓰기 싫었지만 useEffect 써서 해결함</p></li><li><p>useEffect return 값으로 ()=&gt;clearInterval(인터벌값) </p></li></ul></li></ul></li><li><p>오후 10시 퇴근하려했지만 오후 11시 영기님이랑 퇴근</p></li><li><p>오전 12시30분부터 Room current 이상해지는 것 작업 시작</p><ul><li><p>이슈 없어서 생성함</p></li></ul></li><li><p>2시간 <a href="https://swm-fire.atlassian.net/jira/software/projects/FIRE/boards/1?selectedIssue=FIRE-532" data-card-appearance="inline" class="external-link" rel="nofollow">https://swm-fire.atlassian.net/jira/software/projects/FIRE/boards/1?selectedIssue=FIRE-532</a> </p></li><li><p>오전 2시 38분: 이제 마무리하고 자러감</p></li></ul><hr/><p><time datetime="2022-08-31" class="date-past">2022. 8. 31.</time> 수요일 - 재택하는 날</p><ul><li><p>12:45분 기상</p></li><li><p>오후 1시 스크럼</p></li><li><p>헤롱헤롱</p></li><li><p>오루 3시 하령님과 enabled 해결방안 논의</p><ul><li><p>걍 소켓 쓰자</p></li><li><p>제대로 작동 X</p></li></ul></li><li><p>이슈 생성 - <a href="https://swm-fire.atlassian.net/jira/software/projects/FIRE/boards/1?selectedIssue=FIRE-533" data-card-appearance="inline" class="external-link" rel="nofollow">https://swm-fire.atlassian.net/jira/software/projects/FIRE/boards/1?selectedIssue=FIRE-533</a> </p><ul><li><p>16:47 문서화 및 개발 종료 </p></li></ul></li><li><p><del>해야되는것 리마인드 </del></p><ul><li><p><del>해커톤 기획 </del></p></li><li><p><del>레디스 스터디 </del></p></li></ul></li><li><p>16:49 다시 인가 관련 공부 시작</p></li></ul>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:05</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

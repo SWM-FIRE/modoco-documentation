@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : 폴더 및 컴포넌트 구조</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="31686657.html">개발</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Convention_40009742.html">Convention</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : 폴더 및 컴포넌트 구조
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 윤영기</span>, last modified on 8월 05, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/55705606/55508995.png" data-image-src="attachments/55705606/55508995.png" data-height="429" data-width="384" data-unresolved-comment-count="0" data-linked-resource-id="55508995" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20220805-104543.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="55705606" data-linked-resource-container-version="2" data-media-id="9f68a0a4-e8ec-490d-9e21-345116589406" data-media-type="file"></span><ul><li><p>adapters → socket 통신 전용 ts file 담당</p></li><li><p>assets → images [json, svg, png] 등을 담당</p></li><li><p>components → 실제로 void 형식 tsx 파일 내보내기를 담당</p><ul><li><p>atoms 는 실제로 여러 파일 구조에서 중복되는 컴포넌트들 혹은 단위를 보관</p></li><li><p>layout 은 전체적인 파일들의 중복적인 layout 구성시에 활용 (ex. 맨 밑에 모도코 정보를 쓰는 레이아웃들은, 기본적으로 해당 레이아웃에서 Footer를 사용)</p></li><li><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="523" loading="lazy" src="attachments/55705606/55476227.png?width=523" data-image-src="attachments/55705606/55476227.png" data-height="341" data-width="1292" data-unresolved-comment-count="0" data-linked-resource-id="55476227" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20220805-104907.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="55705606" data-linked-resource-container-version="2" data-media-id="1f277aae-c131-44dd-9b5b-f0f8a6e588fd" data-media-type="file"></span></li><li><p>그 외는 페이지 별로 들어가는 component 관리</p></li><li><p>안에서도 별도로 한 컴포넌트 안에 여러 컴포넌트가 소속되어 있는 경우, 파일을 분리하여 관리</p></li><li><p>그 외는 페이지 별로 들어가는 component 관리</p></li><li><p>안에서도 별도로 한 컴포넌트 안에 여러 컴포넌트가 소속되어 있는 경우, 파일을 분리하여 관리</p></li><li><p>개인적으로 한 파일당 style 이 4개 이상 넘어가면 component 분할이 필요해 보임</p></li></ul></li></ul><span class="confluence-embedded-file-wrapper image-left-wrap-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-wrap-left" width="340" loading="lazy" src="attachments/55705606/55574533.png?width=340" data-image-src="attachments/55705606/55574533.png" data-height="193" data-width="320" data-unresolved-comment-count="0" data-linked-resource-id="55574533" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20220805-105009.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="55705606" data-linked-resource-container-version="2" data-media-id="838a07de-1b3c-466c-9b8f-2d91dda051df" data-media-type="file"></span><span class="confluence-embedded-file-wrapper image-right-wrap-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-wrap-right" width="340" loading="lazy" src="attachments/55705606/55607303.png?width=340" data-image-src="attachments/55705606/55607303.png" data-height="540" data-width="399" data-unresolved-comment-count="0" data-linked-resource-id="55607303" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20220805-105018.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="55705606" data-linked-resource-container-version="2" data-media-id="23075307-e0d6-412b-b1a4-9f75488f4649" data-media-type="file"></span><p /><ul><li><p>fonts → 폰트들 및 fonts.css 관리</p></li><li><p>hooks → 공통적으로 사용 할 수 있는 ts 파일로 나오는 hook 관리</p></li><li><p>interface → 공통적으로 사용하는 interface 관리</p></li><li><p>pages → 모도코에서 사용되는 페이지들 관리</p></li><li><p>stores → zustand 를 활용한 전역변수들 관리</p></li><li><p>styles → 전역 스타일이나 테마 같은 global 한 css 관련 관리</p></li></ul><p /><h3 id="id-폴더및컴포넌트구조-그외">그 외</h3><ul><li><p>config.json</p><ul><li><p>API URL 담당 config</p></li></ul></li><li><p>*.d.ts</p><ul><li><p>원래 안되는 .[] file 등 처리 할 수 있게 예외 처리해주는 파일 ex) *.svg / *.gif 등</p></li></ul></li></ul><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/55705606/55508995.png">image-20220805-104543.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/55705606/55509002.png">image-20220805-104708.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/55705606/55148547.png">image-20220805-104852.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/55705606/55476227.png">image-20220805-104907.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/55705606/55214096.png">image-20220805-105006.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/55705606/55574533.png">image-20220805-105009.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/55705606/55607303.png">image-20220805-105018.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:04</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

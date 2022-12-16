@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : WebRTC</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="17006593.html">기획</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="57212933.html">중간평가</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="59080709.html">프론트엔드 기능 설명</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : WebRTC
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 윤영기</span>, last modified on 8월 14, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="WebRTC-WebRTCConnectionFlowDiagram">WebRTC Connection Flow Diagram</h2><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/59244545/59473921.png" data-image-src="attachments/59244545/59473921.png" data-height="841" data-width="717" data-unresolved-comment-count="0" data-linked-resource-id="59473921" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="webRTC diagram.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="59244545" data-linked-resource-container-version="5" data-media-id="b5d2bae3-6a08-4435-8661-2cfb129f3150" data-media-type="file"></span><p /><ul><li><p>새로운 user에 대하여 Peer Connection 생성하여 Offer 보내는 과정</p></li></ul><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">const { peerConnection } = createPeerConnection(sid);
+if (peerConnection) {
+  const offer = await peerConnection.createOffer({
+    offerToReceiveAudio: true,
+    offerToReceiveVideo: true,
+  });
+  await peerConnection.setLocalDescription(
+    new RTCSessionDescription(offer),
+  );
+  roomSocket.emit(&#39;call-user&#39;, { to: sid, offer });
+}</pre>
+</div></div><p /><ul><li><p>offer 받은 후 상대방에 대한  Peer Connection 생성한 후 Answer 보내는 과정</p></li></ul><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">const { peerConnection } = createPeerConnection(sid);
+if (peerConnection) {
+  await peerConnection.setRemoteDescription(
+    new RTCSessionDescription(offer),
+  );
+  const answer = await peerConnection.createAnswer();
+  await peerConnection.setLocalDescription(answer);
+  roomSocket.emit(&#39;make-answer&#39;, { to: sid, answer });
+}</pre>
+</div></div><p /><ul><li><p>화면공유를 껐다 켰을 시 videoTrack을 replace하는 경우</p><ul><li><p>나의 peerConnection중에 연결된 sender들을 찾고, sender들의 videoTrack을 방금 공유한 videoTrack으로 replace하는 과정</p></li></ul></li></ul><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">Object.keys(pcs).forEach((pc) =&gt; {
+  const sender = pcs[pc]
+    .getSenders()
+    .find((s) =&gt; s.track.kind === &#39;video&#39;);
+  sender.replaceTrack(videoStream.getVideoTracks()[0]);
+});</pre>
+</div></div><p /><ul><li><p>음성 공유시 mic toggle</p><ul><li><p>나의 audioTrack을 !enable로 설정</p></li></ul></li></ul><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">const toggleMic = () =&gt; {
+  myStream.localStream
+    .getAudioTracks()
+    .forEach((track) =&gt; (track.enabled = !track.enabled));
+};</pre>
+</div></div><p /><p /><blockquote><p>맥북 에어로 작업중인데 비율이 안맞아서, 맥북프로로 재 캡처 후 다시 작업할 예정입니다.</p></blockquote><h2 id="WebRTC-준비화면">준비화면</h2><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/59244545/59113475.png" data-image-src="attachments/59244545/59113475.png" data-height="746" data-width="1349" data-unresolved-comment-count="0" data-linked-resource-id="59113475" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20220811-072130.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="59244545" data-linked-resource-container-version="5" data-media-id="b712084e-5c67-4b91-96dc-dbfece71c595" data-media-type="file"></span><p>Room 에 실제로 접근하기전, 나의 마이크 상태와 화면 공유 정보를 선택할 수 있는 화면</p><ul><li><p>좌측 스크린 : 나의 공유되는 화면이 나오는 영역</p></li><li><p>하단 아이콘</p><ul><li><p>화면공유 : 화면공유를 껐다 킬 수 있으며, 껏다 키는 과정에서 어떤 화면을 공유 할지 선택 할 수 있음</p></li><li><p>음성 : 껐다 킬 수 있음</p></li></ul></li><li><p>우측 정보 : 방에 해당하는 정보들</p></li><li><p>입장하기 버튼 : 방에 입장 할 수 있음</p></li></ul><h2 id="WebRTC-Room입장">Room 입장</h2><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/59244545/59113481.png" data-image-src="attachments/59244545/59113481.png" data-height="748" data-width="895" data-unresolved-comment-count="0" data-linked-resource-id="59113481" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20220811-072152.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="59244545" data-linked-resource-container-version="5" data-media-id="9c09b935-2187-4be8-b3c1-434929c961fd" data-media-type="file"></span><p>Room 에 입장 후 화면</p><ul><li><p>헤더</p><ul><li><p>현재 테마를 움직이는 svg형태로 보여주며, 우측 아이콘에서 테마에 따라 흘러나오는 white noise의 볼륨을 조절 할 수 있는 volume Slider 존재. 스피커를 클릭하여 아예 on/off 할 수 있음</p></li><li><p>레코드 영역 - 내가 이 방에 와서 얼마나 코딩을 진행하고 있는지 확인 할 수 있음</p></li><li><p>화면공유 아이콘: 화면을 껐다 킬 수 있으며, 재선택시 어떠한 화면을 공유할 지 선택 할 수 있음</p></li><li><p>마이크 아이콘: 내 음성을 껐다 킬 수 있음</p></li><li><p>카메라 아이콘: 추후에 웹캠을 활용하여 나의 얼굴을 보여줄 수 있는 아이콘으로 발전 예정</p></li><li><p>나가기 버튼: Room을 나갈 수 있음</p></li></ul></li><li><p>화면 공유 영역</p><ul><li><p>내가 1번째로 보임</p></li><li><p>들어오는 순서대로 2, 3, 4가 채워짐</p></li><li><p>현재 WebRTC p2p mesh구조의 한계로 4명</p><ul><li><p>추후에 SFU나 MCU 방식을 도입하여 더 많은 사람들을 관리 할 수 있게 할 예정</p></li></ul></li></ul></li><li><p>채팅</p><ul><li><p>현재 방에 있는 유저들과 채팅을 진행 할 수 있음</p></li></ul></li></ul><h2 id="WebRTC-테마">테마</h2><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/59244545/59604997.png" data-image-src="attachments/59244545/59604997.png" data-height="718" data-width="938" data-unresolved-comment-count="0" data-linked-resource-id="59604997" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20220811-075844.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="59244545" data-linked-resource-container-version="5" data-media-id="847e8a06-7bb5-4b21-9f5f-cab394adaef2" data-media-type="file"></span><ul><li><p>현재 4가지 테마가 존재함</p><ul><li><p>모닥불</p></li><li><p>여행</p></li><li><p>우주</p></li><li><p>바다</p></li><li><p>캠핑</p></li></ul></li><li><p>각 테마별로 white noise가 존재함</p></li><li><p>각 테마별로 배경이 달라지며, 해당하는 색상으로 전체적인 Layout 색상이 변경됨</p></li><li><p>각 테마별로 움직이는 svg 즉 테마도 설정됨</p></li></ul><p /><p /><p /><p /><p /><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/59244545/58982403.svg">webRTC diagram.svg</a> (image/svg+xml)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/59244545/59473927.png">webRTC diagram.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/59244545/59473921.png">webRTC diagram.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/59244545/59113475.png">image-20220811-072130.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/59244545/59113481.png">image-20220811-072152.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/59244545/59277327.png">image-20220811-072208.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/59244545/59604997.png">image-20220811-075844.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:03</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

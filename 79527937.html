@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : 2022-09-27 실시간 상태 공유, 조항준 멘토님 UX</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="720918.html">데일리 회의록</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="76709889.html">9월</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : 2022-09-27 실시간 상태 공유, 조항준 멘토님 UX
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 고주형</span>, last modified by <span class='editor'> 이하령</span> on 9월 27, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h1 id="id-2022-09-27실시간상태공유,조항준멘토님UX-실시간상태공유">실시간 상태 공유</h1><p>회의자: <a class="confluence-userlink user-mention current-user-mention" data-username="5ae579319fcb1f22f34d33f2" data-account-id="5ae579319fcb1f22f34d33f2" href="https://swm-fire.atlassian.net/wiki/people/5ae579319fcb1f22f34d33f2?ref=confluence" target="_blank" data-linked-resource-id="524292" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">고주형</a> <a class="confluence-userlink user-mention" data-username="62666f5934b9b7006879b22b" data-account-id="62666f5934b9b7006879b22b" href="https://swm-fire.atlassian.net/wiki/people/62666f5934b9b7006879b22b?ref=confluence" target="_blank" data-linked-resource-id="196611" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">이하령</a> </p><p>관련 이슈: 
+
+    
+
+            
+
+
+
+
+    <span class="confluence-jim-macro jira-issue resolved" data-jira-key="FIRE-689" >
+                <a href="https://swm-fire.atlassian.net/browse/FIRE-689" class="jira-issue-key"><img class="icon" src="https://swm-fire.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium" />FIRE-689</a>
+                    -
+            <span class="summary">다른 사용자 볼륨 조절 가능</span>
+                                                            <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-success jira-macro-single-issue-export-pdf">완료됨</span>
+            </span>
+ </p><h2 id="id-2022-09-27실시간상태공유,조항준멘토님UX-현재의서버방식">현재의 서버 방식</h2><h3 id="id-2022-09-27실시간상태공유,조항준멘토님UX-기존의방식">기존의 방식</h3><p>Room에 A, B 참여중</p><p>C라는 사람이 들어오면?</p><p>joinRoom(C) 발생</p><p>A, B:</p><ul><li><p>newUser 이벤트 받음</p><ul><li><p>C id 수신</p></li></ul></li></ul><p>C: </p><ul><li><p>ExistingRoomUser 이벤트 받음</p><ul><li><p>A id 수신</p></li><li><p>B id</p></li></ul></li></ul><h2 id="id-2022-09-27실시간상태공유,조항준멘토님UX-제안">제안 </h2><p>제안1: ExistingRoom, newRoom에서 추가적으로 실시간 상태의 초기값을 실어서 보내주고 실시간 통신용으로는 따로 이벤트를 만들어서 하자</p><p>제안2: joinRoom이후에 별도의 event를 통해 사용자의 state 공유</p><ul><li><p>마이크는 기존의 onMediaChange 쓰자</p></li></ul><h4 id="id-2022-09-27실시간상태공유,조항준멘토님UX-제안2채택이유">제안2 채택 이유</h4><p>실시간 동기화 상태를 처리하기 위한 방법을 통일해서 일관성 있게 유지하자 </p><ul><li><p>실시간 상태 요소: 음소거(Socket), 비디오(WebRTC logic -&gt; Socket??), 접속중, </p></li></ul><p>제안1의 경우 매번 새로운 실시간 상태가 추가로 공유되어야 하는 경우 joinRoom을 수정해줘야 한다.</p><h3 id="id-2022-09-27실시간상태공유,조항준멘토님UX-결론">결론</h3><p>제안2 채택</p><h2 id="id-2022-09-27실시간상태공유,조항준멘토님UX-프론트에서고민해야할것">프론트에서 고민해야 할 것</h2><p>UI 참가 = 참가한 사람이 보임, 들림</p><p>참가 기준을 뭐로 둘 것인가? </p><ul><li><p>모든 상태가 불러와졌을 때 </p></li><li><p>그냥 상대가 들어온 것이 인식되자마자(서버 로직이 수행)</p></li></ul><p /><hr/><h3 id="id-2022-09-27실시간상태공유,조항준멘토님UX-조항준멘토님멘토링">조항준 멘토님 멘토링</h3><ul><li><p>카드가 너무 크다</p><ul><li><p>정사각형</p></li></ul></li><li><p>새로 방 생성</p><ul><li><p>그냥 + 버튼만 있어도 될듯</p></li><li><p>가장 처음에 나오는게 맞나? 가장 중요하나?</p></li></ul></li><li><p>버튼 통일성</p><ul><li><p>현재는 버튼이라는 느낌 x</p></li></ul></li><li><p>내가 만든 방이 가장 먼저 나오게</p></li><li><p>랜딩페이지 페이지화 나누고</p><ul><li><p>사진, 시각화 필요</p></li></ul></li><li><p>입장했던방</p><ul><li><p>언제했는지</p></li><li><p>그 방에서 얼마나 했는지</p></li></ul></li><li><p>개인 프로필 사진 업로드할 수 있게</p></li><li><p>사용자의 입력 작업 최소화</p><ul><li><p>방 만들때 최대 인원수 default 4</p></li></ul></li><li><p>기능 리스트 테이블 작성하기</p></li></ul>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:04</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

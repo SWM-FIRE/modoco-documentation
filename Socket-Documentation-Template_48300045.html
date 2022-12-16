@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : Socket Documentation Template</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="31686657.html">개발</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="40501253.html">API 문서</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="48201729.html">Socket 통신 문서</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : Socket Documentation Template
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 고주형</span>, last modified on 7월 26, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h1 id="SocketDocumentationTemplate-DocumentTitle">Document Title</h1><hr/><p>소켓 이벤트에 대한 추가적인 정보를 적습니다.</p><h3 id="SocketDocumentationTemplate-Namespace"><strong>Namespace</strong></h3><p>Path만 씁니다. root경로를 포함한 절대 경로를 쓰지 않습니다. </p><h3 id="SocketDocumentationTemplate-Sender/Receiver:">Sender / Receiver:</h3><p>송수신 주체에 관해서 적습니다.</p><h4 id="SocketDocumentationTemplate-Sender:">Sender: </h4><p><code>Client</code> | <code>Receiver</code></p><h4 id="SocketDocumentationTemplate-Receiver:">Receiver:</h4><p><code>Client</code> | <code>Receiver</code></p><h3 id="SocketDocumentationTemplate-Event:"><strong>Event:</strong></h3><p>Event명을 적습니다.</p><h3 id="SocketDocumentationTemplate-Message(Payload)"><strong>Message(Payload)</strong></h3><h4 id="SocketDocumentationTemplate-Type:">Type:</h4><p><code>json</code> | <code>text</code> | <code>binary</code></p><h4 id="SocketDocumentationTemplate-Required:"><strong>Required:</strong></h4><h4 id="SocketDocumentationTemplate-id:number"><code>id: number</code></h4><h4 id="SocketDocumentationTemplate-Optional:"><strong>Optional:</strong></h4><p><code>photo_id: string</code></p><h4 id="SocketDocumentationTemplate-Playloadformat">Playload format</h4><p>메시지 playload가 어떤식으로 보여야 되는지 적습니다.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;id&quot; : &quot;1&quot;,
+  &quot;photo_id&quot;: &quot;cute_cat#112&quot;
+}</pre>
+</div></div><hr/><h3 id="SocketDocumentationTemplate-SuccessResponse:"><strong>Success Response:</strong></h3><p>성공한 경우 반환되는 데이터는 무엇인지 다시 다른 이벤트로 emit을 하는지 적습니다.</p><h4 id="SocketDocumentationTemplate-Response:{id:12}"><strong>Response:</strong> <code>{ id : 12 }</code></h4><p /><hr/><h3 id="SocketDocumentationTemplate-ErrorResponse:"><strong>Error Response:</strong></h3><p>이 event는 여러가지 이유로 Fail하거나 Reject될 수 있습니다. </p><p>ex. 권한 없음, 잘못된 형식의 payload, 등</p><p>Failure에 관한 것은 모두 여기에 적습니다. </p><p><strong>Error Type:</strong> UNAUTHORIZED </p><p><strong>Content:</strong> <code>{ error : &quot;Log in&quot; }</code></p><p>  OR</p><p><strong>Error Type:</strong> UNPROCESSABLE ENTRY </p><p><strong>Content:</strong> <code>{ error : &quot;Invalid room id&quot; }</code></p><hr/><h3 id="SocketDocumentationTemplate-SampleCall:"><strong>Sample Call:</strong></h3><p>위 이벤트를 호출해서 보여주는 샘플 예제입니다. </p><p>동영상이 될 수도 있고 Socket.io코드가 될 수도 있고 포스트맨의 캡처본이 될 수도 있습니다.</p><hr/><h3 id="SocketDocumentationTemplate-Notes:"><strong>Notes:</strong></h3><p>이 문서에 대해 모호한 점, 더 자세한 주석, API에 대한 논의 내용, 등을 정리하는 곳입니다.</p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:03</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : 2022-11-09 배권한 멘토님 - 부하테스트, AWS훅, 영기 취업, 하령 스타트업 고민 상담</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="720918.html">데일리 회의록</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="90734599.html">11월</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : 2022-11-09 배권한 멘토님 - 부하테스트, AWS훅, 영기 취업, 하령 스타트업 고민 상담
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 고주형</span>, last modified on 11월 10, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-Index"><img class="emoticon emoticon-blue-star" data-emoji-id="1f50d" data-emoji-shortname=":mag:" data-emoji-fallback="🔍" src="images/icons/emoticons/72/1f50d.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Index</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1671113107366 {padding: 0px;}
+div.rbtoc1671113107366 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1671113107366 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1671113107366'>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-부하TEST'>부하 TEST</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-회원ID별토큰미리발급'>회원 ID별 토큰 미리 발급</a></li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-테스트할것'>테스트 할 것</a></li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-테스트안할것'>테스트 안 할 것</a></li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-기준'>기준</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-백엔드관점'>백엔드 관점</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-데이터베이스'>데이터베이스</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-말하는팁'>말 하는 팁</a></li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-실무'>실무</a></li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-프론트엔드튜닝'>프론트엔드 튜닝</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-APM를현재붙인상태'>APM를 현재 붙인 상태</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-평가관련'>평가 관련</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-새로운Task'>새로운 Task</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-부하테스트추가질문'>부하테스트 추가 질문</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-bastion부하못버팀'>bastion 부하 못 버팀</a></li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-부하테스트시간'>부하 테스트 시간</a></li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-jvm의문제'>jvm의 문제</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-영기님면접'>영기님 면접</a></li>
+<li><a href='#id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-하령님스타트업'>하령님 스타트업</a></li>
+</ul>
+</div><h2 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-Date"><img class="emoticon emoticon-blue-star" data-emoji-id="1f5d3" data-emoji-shortname=":calendar_spiral:" data-emoji-fallback="\uD83D\uDDD3" src="images/icons/emoticons/72/1f5d3.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Date</h2><p style="margin-left: 30.0px;"><time datetime="2022-11-09" class="date-past">2022. 11. 9.</time> 의 회의록 마스터 :  <a class="confluence-userlink user-mention current-user-mention" data-username="5ae579319fcb1f22f34d33f2" data-account-id="5ae579319fcb1f22f34d33f2" href="https://swm-fire.atlassian.net/wiki/people/5ae579319fcb1f22f34d33f2?ref=confluence" target="_blank" data-linked-resource-id="524292" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">고주형</a>  </p><h2 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-Participants"><img class="emoticon emoticon-blue-star" data-emoji-id="1f465" data-emoji-shortname=":busts_in_silhouette:" data-emoji-fallback="\uD83D\uDC65" src="images/icons/emoticons/72/1f465.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Participants</h2><p><a href="https://swm-fire.atlassian.net/people/team/617ed1cd-4ae5-4e85-9116-fccd208cb50e" class="external-link" rel="nofollow">TEAM FIRE</a> (<a class="confluence-userlink user-mention current-user-mention" data-username="5ae579319fcb1f22f34d33f2" data-account-id="5ae579319fcb1f22f34d33f2" href="https://swm-fire.atlassian.net/wiki/people/5ae579319fcb1f22f34d33f2?ref=confluence" target="_blank" data-linked-resource-id="524292" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">고주형</a> <a class="confluence-userlink user-mention" data-username="62666f5a4297890069453757" data-account-id="62666f5a4297890069453757" href="https://swm-fire.atlassian.net/wiki/people/62666f5a4297890069453757?ref=confluence" target="_blank" data-linked-resource-id="196617" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">윤영기</a> <a class="confluence-userlink user-mention" data-username="62666f5934b9b7006879b22b" data-account-id="62666f5934b9b7006879b22b" href="https://swm-fire.atlassian.net/wiki/people/62666f5934b9b7006879b22b?ref=confluence" target="_blank" data-linked-resource-id="196611" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">이하령</a>) + <a class="confluence-userlink user-mention" data-username="557058:06f2db0e-1dfa-43a6-b2de-a6e5360d32cd" data-account-id="557058:06f2db0e-1dfa-43a6-b2de-a6e5360d32cd" href="https://swm-fire.atlassian.net/wiki/people/557058:06f2db0e-1dfa-43a6-b2de-a6e5360d32cd?ref=confluence" target="_blank" data-linked-resource-id="14974977" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">Kwon-Han Bae</a> </p><h2 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-Discussiontopics"><img class="emoticon emoticon-blue-star" data-emoji-id="1f5e3" data-emoji-shortname=":speaking_head:" data-emoji-fallback="\uD83D\uDDE3" src="images/icons/emoticons/72/1f5e3.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Discussion topics</h2><h3 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-부하TEST">부하 TEST</h3><p>시나리오 기반으로 한다</p><blockquote><p>&quot;들어가서 아무방 250개 미리 만들고 1~4명 서로 채팅 및 시그널링&quot;</p></blockquote><p> -&gt; 기록 </p><p /><h4 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-회원ID별토큰미리발급">회원 ID별 토큰 미리 발급 </h4><blockquote><p>&quot;토큰으로 해서 main&quot;</p></blockquote><h4 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-테스트할것">테스트 할 것</h4><ul><li><p>웹 소켓 통신 </p></li><li><p>채팅 </p></li><li><p>방 만들기 </p></li></ul><h4 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-테스트안할것">테스트 안 할 것</h4><p>WebRTC (부하없다침)</p><h4 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-기준">기준</h4><p>WebSocket</p><ul><li><p>동접 : 1000명 </p></li></ul><hr/><h3 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-백엔드관점">백엔드 관점</h3><ul><li><p>New Relic에 있는 것으로 성능이 어떻게 되는지 테스트 </p></li><li><p>보고서</p></li></ul><h4 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-데이터베이스">데이터베이스 </h4><ul><li><p>병목 올 수도</p></li></ul><hr/><h3 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-말하는팁">말 하는 팁 </h3><ul><li><p>메인 아님ㄴ</p></li><li><p>세션 미리 발급 후 테스트 </p></li></ul><p /><ul><li><p>웹RTC는 상관 X </p></li><li><p>... </p></li></ul><p>=&gt; 동접 몇 명 ok!</p><hr/><h3 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-실무">실무</h3><p>TEST: 1000명 추천!</p><p> 보통은 동접 5%, 10%로 친다. </p><p>   =&gt; 회원 수 100만 명!</p><hr/><h3 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-프론트엔드튜닝">프론트엔드 튜닝</h3><p>&quot;라이트 하우스 &quot;</p><ul><li><p>뭘해서 올렸다!</p></li></ul><p> -&gt; 시나리오 기반으로 가자 </p><h4 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-APM를현재붙인상태">APM를 현재 붙인 상태 </h4><ul><li><p>왜? </p></li><li><p>초기에 tracing을 해야 하기 때문!</p></li><li><p>어쩔 수 없다 </p></li></ul><p /><p>하지만 빼면 높다!</p><hr/><h3 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-평가관련">평가 관련</h3><p>지적 지적 </p><p>결제 만들려고 했지만 기간 내에 하지 못했다.</p><p>-&gt; 패스워드를 넣었다! </p><p /><hr/><p>왜 못함?</p><ul><li><p>완성도 높이려고 함</p></li><li><p>결제 = 사업자 필요 </p></li></ul><hr/><h4 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-새로운Task">새로운 Task</h4><p>admin 페이지 만들기 </p><ul><li><p>admin js </p></li></ul><p>   =&gt; 기본 템플릿 </p><ul><li><p>꾸며서 동접, CPU 사용 넣자</p></li></ul><p> -&gt; 그래야지 관리할 수 있다. 결제를 붙일 수 있다.</p><hr/><h3 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-부하테스트추가질문">부하테스트 추가 질문</h3><h4 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-bastion부하못버팀">bastion 부하 못 버팀</h4><ul><li><p>높은 성능 =&gt; ngrinder 당연</p></li><li><p>8core -&gt; ㄱㅊ</p></li></ul><p>docker compose 작성 완료</p><ul><li><p>시간 절약 가능</p></li></ul><p /><h4 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-부하테스트시간">부하 테스트 시간 </h4><ul><li><p>부하 10분 =&gt; 1000명 </p></li></ul><p /><h4 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-jvm의문제">jvm의 문제 </h4><ul><li><p>gc가 찰 때까지의 돌려야 한다 </p></li><li><p>node는 이런 문제는 없다 </p></li></ul><hr/><h3 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-영기님면접">영기님 면접</h3><ul><li><p>정리하자</p></li><li><p>노션 굳</p></li></ul><h3 id="id-2022-11-09배권한멘토님-부하테스트,AWS훅,영기취업,하령스타트업고민상담-하령님스타트업">하령님 스타트업</h3><ul><li><p>물어야 할 것 다 물어보자</p><ul><li><p>연봉</p></li><li><p>사수 있는지</p></li><li><p>문화</p></li><li><p>사람 비율</p></li><li><p>등</p></li></ul></li><li><p>다 괜찮으면 인턴이면 ㄱㅊ다</p></li></ul><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92504065/92504074.png">image-20221108-065443.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92504065/92504077.png">image-20220804-131608.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92504065/92504080.png">image-20221107-061459.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92504065/92504083.png">스크린샷 2022-10-23 오후 4.34.14-20221023-073416.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92504065/92504086.png">스크린샷 2022-11-07 오후 3.15.48-20221107-061608.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92504065/92504089.png">image-20221107-061701.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92504065/92504092.png">image-20221107-063928.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92504065/92504095.png">image-20221107-064527.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/92504065/92504098.png">image-20221107-064904.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:05</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

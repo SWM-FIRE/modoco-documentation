@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : 개발</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : 개발
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 고주형</span>, last modified by <span class='editor'> 윤영기</span> on 7월 09, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/40501253" data-linked-resource-id="40501253" data-linked-resource-version="3" data-linked-resource-type="page">API 문서</a></h2>
+<ul class='childpages-macro'><li><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/49315841" data-linked-resource-id="49315841" data-linked-resource-version="2" data-linked-resource-type="page">REST API (v1)</a><ul class='childpages-macro'><li><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/39813248/Users+API" data-linked-resource-id="39813248" data-linked-resource-version="28" data-linked-resource-type="page">Users API</a></li><li><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/49479681/Rooms+API" data-linked-resource-id="49479681" data-linked-resource-version="6" data-linked-resource-type="page">Rooms API</a></li></ul></li><li><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/48201729" data-linked-resource-id="48201729" data-linked-resource-version="2" data-linked-resource-type="page">Socket 통신 문서</a><ul class='childpages-macro'><li><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/48300045/Socket+Documentation+Template" data-linked-resource-id="48300045" data-linked-resource-version="4" data-linked-resource-type="page">Socket Documentation Template</a></li><li><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/88539150" data-linked-resource-id="88539150" data-linked-resource-version="9" data-linked-resource-type="page">CanJoinRoom 및 JoinRoom Socket</a></li></ul></li></ul><h2><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/40009742/Convention" data-linked-resource-id="40009742" data-linked-resource-version="3" data-linked-resource-type="page">Convention</a></h2>
+<ul class='childpages-macro'><li><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/51838977/Backend+TypeScript+Convention" data-linked-resource-id="51838977" data-linked-resource-version="1" data-linked-resource-type="page">Backend TypeScript Convention</a></li><li><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/55705606" data-linked-resource-id="55705606" data-linked-resource-version="2" data-linked-resource-type="page">폴더 및 컴포넌트 구조</a></li></ul><h2><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/67731489" data-linked-resource-id="67731489" data-linked-resource-version="1" data-linked-resource-type="page">오류 및 해결</a></h2>
+<ul class='childpages-macro'><li><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/71237691" data-linked-resource-id="71237691" data-linked-resource-version="1" data-linked-resource-type="page">[00/00] 오류 내용</a></li></ul><h2><a href="https://swm-fire.atlassian.net/wiki/spaces/FI/pages/84443137" data-linked-resource-id="84443137" data-linked-resource-version="1" data-linked-resource-type="page">메일 템플릿</a></h2>
+<p>StyleLint test</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">yarn lint:css</pre>
+</div></div><p /><p>https로 키는법</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">yarn start:https</pre>
+</div></div><p /><p>local에서 https 인증서 받는법</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">brew install mkcert
+mkcert -install #directory안에서
+mkcert -key-file key.pem -cert-file cert.pem localhost 127.0.0.1 ::1</pre>
+</div></div><p /><p>ESLint - unused vars</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">parameter 사용시에 type을 지정하는 경우, 어쩔 수 없이 unused var를 사용해야함
+parameter에서만 &#39;_&#39; + variable name 을 지정할 수 있게 해 예외처리</pre>
+</div></div><p /><h1 id="id-개발-AWS">AWS</h1><p>754843424293</p><p />
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:03</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

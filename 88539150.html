@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : CanJoinRoom 및 JoinRoom Socket</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="31686657.html">개발</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="40501253.html">API 문서</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="48201729.html">Socket 통신 문서</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : CanJoinRoom 및 JoinRoom Socket
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 고주형</span>, last modified on 11월 01, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h1 id="CanJoinRoom및JoinRoomSocket-CanJoinRoom및JoinRoom소켓관련문서">CanJoinRoom 및 JoinRoom 소켓 관련 문서</h1><hr/><p><a class="confluence-userlink user-mention" data-username="62666f5934b9b7006879b22b" data-account-id="62666f5934b9b7006879b22b" href="https://swm-fire.atlassian.net/wiki/people/62666f5934b9b7006879b22b?ref=confluence" target="_blank" data-linked-resource-id="196611" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">이하령</a> <a class="confluence-userlink user-mention" data-username="62666f5a4297890069453757" data-account-id="62666f5a4297890069453757" href="https://swm-fire.atlassian.net/wiki/people/62666f5a4297890069453757?ref=confluence" target="_blank" data-linked-resource-id="196617" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">윤영기</a> </p><h3 id="CanJoinRoom및JoinRoomSocket-Namespace"><strong>Namespace</strong></h3><p>/room</p><hr/><h1 id="CanJoinRoom및JoinRoomSocket-CanJoinRoom">CanJoinRoom</h1><p>Room에 join할 수 있는지 체크하는 이벤트</p><h3 id="CanJoinRoom및JoinRoomSocket-Sender/Receiver:">Sender / Receiver:</h3><h4 id="CanJoinRoom및JoinRoomSocket-Sender:client(user)">Sender: client(user)</h4><h4 id="CanJoinRoom및JoinRoomSocket-Receiver:server">Receiver: server</h4><h3 id="CanJoinRoom및JoinRoomSocket-Event:"><strong>Event:</strong></h3><p>canJoinRoom</p><h3 id="CanJoinRoom및JoinRoomSocket-Message(Payload)"><strong>Message(Payload)</strong></h3><h4 id="CanJoinRoom및JoinRoomSocket-Type:">Type:</h4><p><code>json</code> </p><h4 id="CanJoinRoom및JoinRoomSocket-Required:"><strong>Required:</strong></h4><h4 id="CanJoinRoom및JoinRoomSocket-room:string;"><code>room: string;</code></h4><h4 id="CanJoinRoom및JoinRoomSocket-Optional:"><strong>Optional:</strong></h4><p>isPublic이 false일 때만 password 필수</p><p><code>password: string</code></p><ul><li><p>4글자 여야 함</p></li></ul><h4 id="CanJoinRoom및JoinRoomSocket-Playloadformat">Playload format</h4><p>메시지 playload가 어떤식으로 보여야 되는지 적습니다.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;room&quot;: &quot;16&quot;,
+  &quot;password&quot;: &quot;1111&quot; #private room일 때만
+}</pre>
+</div></div><hr/><h3 id="CanJoinRoom및JoinRoomSocket-SuccessResponse1:"><strong>Success Response 1:</strong></h3><p>형식이 올바른데 비번이 맞는 경우, public 방인 경우(password 상관 없음)</p><h4 id="CanJoinRoom및JoinRoomSocket-Response:"><strong>Response:</strong> </h4><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;room&quot;: &quot;16&quot;,
+    &quot;canJoinRoom&quot;: true
+}</pre>
+</div></div><h3 id="CanJoinRoom및JoinRoomSocket-SuccessResponse2:"><strong>Success Response 2:</strong></h3><p>형식이 올바른데 비번이 틀린 경우</p><h4 id="CanJoinRoom및JoinRoomSocket-Response:.1"><strong>Response:</strong> </h4><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;room&quot;: &quot;16&quot;,
+    &quot;canJoinRoom&quot;: false
+}</pre>
+</div></div><h3 id="CanJoinRoom및JoinRoomSocket-SuccessResponse3:"><strong>Success Response 3:</strong></h3><p>형식이 올바른데 존재하지 않은 방을 요청한 경우 → 무조건 false</p><h4 id="CanJoinRoom및JoinRoomSocket-Response:.2"><strong>Response:</strong> </h4><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;room&quot;: &quot;1811&quot;, &lt;- 존재하지 않는 방
+    &quot;canJoinRoom&quot;: false
+}</pre>
+</div></div><p>룸이 존재하지 않는 경우</p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/88539150/89554945.png" data-image-src="attachments/88539150/89554945.png" data-height="75" data-width="672" data-unresolved-comment-count="0" data-linked-resource-id="89554945" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221101-080514.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="88539150" data-linked-resource-container-version="9" data-media-id="b41b5d03-41d6-4af1-b4dd-00a7276ab7e0" data-media-type="file"></span><hr/><h3 id="CanJoinRoom및JoinRoomSocket-ErrorResponse:"><strong>Error Response:</strong></h3><p>형식이 올바르지 않은 경우 exception event 발생. </p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/88539150/89391105.png" data-image-src="attachments/88539150/89391105.png" data-height="238" data-width="684" data-unresolved-comment-count="0" data-linked-resource-id="89391105" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20221101-080331.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="88539150" data-linked-resource-container-version="9" data-media-id="a771cdbb-08d7-4df5-955b-52f753de76fa" data-media-type="file"></span><hr/><hr/><hr/><h1 id="CanJoinRoom및JoinRoomSocket-JoinRoom">JoinRoom</h1><p>채팅 Room에 join하는 이벤트 </p><h3 id="CanJoinRoom및JoinRoomSocket-Sender/Receiver:.1">Sender / Receiver:</h3><h4 id="CanJoinRoom및JoinRoomSocket-Sender:client(user).1">Sender: client(user)</h4><h4 id="CanJoinRoom및JoinRoomSocket-Receiver:server.1">Receiver: server</h4><h3 id="CanJoinRoom및JoinRoomSocket-Event:.1"><strong>Event:</strong></h3><p>joinRoom</p><h3 id="CanJoinRoom및JoinRoomSocket-Message(Payload).1"><strong>Message(Payload)</strong></h3><h4 id="CanJoinRoom및JoinRoomSocket-Type:.1">Type:</h4><p><code>json</code> </p><h4 id="CanJoinRoom및JoinRoomSocket-Required:.1"><strong>Required:</strong></h4><h4 id="CanJoinRoom및JoinRoomSocket-uid:number;&lt;-생략하도록바꿀예정"><code>uid: number; &lt;- 생략하도록 바꿀 예정</code></h4><h4 id="CanJoinRoom및JoinRoomSocket-room:string;.1"><code>room: string;</code></h4><h4 id="CanJoinRoom및JoinRoomSocket-Optional:.1"><strong>Optional:</strong></h4><p>isPublic이 false일 때만 password 필수</p><p><code>password: string</code></p><ul><li><p>4글자 여야 함</p></li></ul><h4 id="CanJoinRoom및JoinRoomSocket-Playloadformat.1">Playload format</h4><p>메시지 playload가 어떤식으로 보여야 되는지 적습니다.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;uid&quot; : 3,
+  &quot;room&quot;: &quot;3&quot;,
+  &quot;password&quot;: &quot;1111&quot; #private room일 때만
+}</pre>
+</div></div><hr/><h3 id="CanJoinRoom및JoinRoomSocket-SuccessResponse:"><strong>Success Response:</strong></h3><p>비번이 맞거나 존재하는 공개 방에 성공적으로 참가한 경우</p><h4 id="CanJoinRoom및JoinRoomSocket-Response:{room:&quot;3&quot;}"><strong>Response:</strong> <code>{ room : &quot;3&quot; }</code></h4><hr/><h3 id="CanJoinRoom및JoinRoomSocket-ErrorResponse:.1"><strong>Error Response:</strong></h3><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/88539150/88866819" data-image-src="attachments/88539150/88866819" data-height="654" data-width="1476" data-unresolved-comment-count="0" data-linked-resource-id="88866819" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="d158baab-2f11-43a8-9d42-30811b267d31#media-blob-url=true&amp;id=1b314243-fa21-4965-90d0-9d2fcf7abbf5&amp;collection=&amp;contextId=10568&amp;mimeType=image%2Fpng&amp;name=image-20221031-094649.png&amp;size=127526&amp;width=797&amp;height=353&amp;alt=" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="88539150" data-linked-resource-container-version="9" data-media-id="c753d9eb-f8ab-463e-8fc4-bac855db8c92" data-media-type="file"></span><p>이 event는 여러가지 이유로 Fail하거나 Reject될 수 있습니다. </p><p>ex. 권한 없음, 잘못된 형식의 payload, 등</p><p>Failure에 관한 것은 모두 여기에 적습니다. </p><p><strong>Error Type:</strong> UNAUTHORIZED </p><p><strong>Content:</strong> <code>{ error : &quot;Log in&quot; }</code></p><p>  OR</p><p><strong>Error Type:</strong> UNPROCESSABLE ENTRY </p><p><strong>Content:</strong> <code>{ error : &quot;Invalid room id&quot; }</code></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/88539150/88866819">d158baab-2f11-43a8-9d42-30811b267d31#media-blob-url=true&amp;id=1b314243-fa21-4965-90d0-9d2fcf7abbf5&amp;collection=&amp;contextId=10568&amp;mimeType=image%2Fpng&amp;name=image-20221031-094649.png&amp;size=127526&amp;width=797&amp;height=353&amp;alt=</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/88539150/89391105.png">image-20221101-080331.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/88539150/89423875.png">image-20221101-080331.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/88539150/89554945.png">image-20221101-080514.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:03</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIRE WIKI : 2022-07-14</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">FIRE WIKI</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="262207.html">FIRE 위키 홈</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="720918.html">데일리 회의록</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="36700161.html">7월</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            FIRE WIKI : 2022-07-14
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> 고주형</span>, last modified by <span class='editor'> 윤영기</span> on 7월 18, 2022
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="id-2022-07-14-Index"><img class="emoticon emoticon-blue-star" data-emoji-id="1f50d" data-emoji-shortname=":mag:" data-emoji-fallback="🔍" src="images/icons/emoticons/72/1f50d.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Index</h2><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1671113067074 {padding: 0px;}
+div.rbtoc1671113067074 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1671113067074 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1671113067074'>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-07-14-CORS'>CORS</a></li>
+<li><a href='#id-2022-07-14-GlobalConfig'>Global Config</a></li>
+<li><a href='#id-2022-07-14-ENV'>ENV</a></li>
+<li><a href='#id-2022-07-14-프로젝트진행사항'>프로젝트 진행 사항</a></li>
+<li><a href='#id-2022-07-14-프론트엔드코드리뷰'>프론트엔드 코드리뷰</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-07-14-Auth컴포넌트를감싼다'>Auth 컴포넌트를 감싼다</a></li>
+<li><a href='#id-2022-07-14-모달'>모달</a></li>
+<li><a href='#id-2022-07-14-일반적레이아웃구성'>일반적 레이아웃 구성</a></li>
+<li><a href='#id-2022-07-14-모달정보를어떻게끼웁니까?'>모달 정보를 어떻게 끼웁니까?</a></li>
+<li><a href='#id-2022-07-14-Main.tsx'>Main.tsx</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-07-14-정원용멘토님의관점'>정원용 멘토님의 관점</a></li>
+<li><a href='#id-2022-07-14-Main컴포넌의역할은?'>Main 컴포넌의 역할은?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href='#id-2022-07-14-명료화는어떻게하나요?'>명료화는 어떻게하나요?</a></li>
+<li><a href='#id-2022-07-14-네이밍바꾸기'>네이밍 바꾸기</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-07-14-Handler의네이밍'>Handler의 네이밍</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-07-14-모달에관한코드를분리하라'>모달에 관한 코드를 분리하라</a></li>
+<li><a href='#id-2022-07-14-Scroll을위한CSS'>Scroll을 위한 CSS</a></li>
+<li><a href='#id-2022-07-14-Scrolls(LobbySection)'>Scrolls(LobbySection)</a></li>
+<li><a href='#id-2022-07-14-Store객체'>Store 객체</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-07-14-상태관리하는라이브러리zustand'>상태 관리하는 라이브러리 zustand</a></li>
+<li><a href='#id-2022-07-14-멘토님이쓰는것'>멘토님이 쓰는 것</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-07-14-Auth로감싸진컴포넌트'>Auth로 감싸진 컴포넌트</a></li>
+<li><a href='#id-2022-07-14-칭찬'>칭찬</a></li>
+<li><a href='#id-2022-07-14-코드리뷰정리'>코드 리뷰 정리</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-07-14-팁(서버든클라든)'>팁(서버든 클라든)</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-07-14-백과클라이언트의차이'>백과 클라이언트의 차이</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-07-14-프론트엔드는UI'>프론트엔드는 UI</a></li>
+</ul>
+</li>
+<li><a href='#id-2022-07-14-HTTP'>HTTP</a>
+<ul class='toc-indentation'>
+<li><a href='#id-2022-07-14-HTTP.1'>HTTP</a></li>
+<li><a href='#id-2022-07-14-telnet을이용한실습'>telnet을 이용한 실습</a></li>
+<li><a href='#id-2022-07-14-다음에도이어서실습'>다음에도 이어서 실습</a></li>
+</ul>
+</li>
+</ul>
+</div><h2 id="id-2022-07-14-Date"><img class="emoticon emoticon-blue-star" data-emoji-id="1f5d3" data-emoji-shortname=":calendar_spiral:" data-emoji-fallback="\uD83D\uDDD3" src="images/icons/emoticons/72/1f5d3.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Date</h2><p style="margin-left: 30.0px;"><time datetime="2022-07-14" class="date-past">2022. 7. 14.</time> 의 회의록 마스터 :  <a class="confluence-userlink user-mention current-user-mention" data-username="5ae579319fcb1f22f34d33f2" data-account-id="5ae579319fcb1f22f34d33f2" href="https://swm-fire.atlassian.net/wiki/people/5ae579319fcb1f22f34d33f2?ref=confluence" target="_blank" data-linked-resource-id="524292" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">고주형</a> </p><h2 id="id-2022-07-14-Participants"><img class="emoticon emoticon-blue-star" data-emoji-id="1f465" data-emoji-shortname=":busts_in_silhouette:" data-emoji-fallback="\uD83D\uDC65" src="images/icons/emoticons/72/1f465.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Participants</h2><p><a href="https://swm-fire.atlassian.net/people/team/617ed1cd-4ae5-4e85-9116-fccd208cb50e" class="external-link" rel="nofollow">TEAM FIRE</a> (<a class="confluence-userlink user-mention" data-username="62666f5a4297890069453757" data-account-id="62666f5a4297890069453757" href="https://swm-fire.atlassian.net/wiki/people/62666f5a4297890069453757?ref=confluence" target="_blank" data-linked-resource-id="196617" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">윤영기</a> <a class="confluence-userlink user-mention current-user-mention" data-username="5ae579319fcb1f22f34d33f2" data-account-id="5ae579319fcb1f22f34d33f2" href="https://swm-fire.atlassian.net/wiki/people/5ae579319fcb1f22f34d33f2?ref=confluence" target="_blank" data-linked-resource-id="524292" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">고주형</a> <a class="confluence-userlink user-mention" data-username="62666f5934b9b7006879b22b" data-account-id="62666f5934b9b7006879b22b" href="https://swm-fire.atlassian.net/wiki/people/62666f5934b9b7006879b22b?ref=confluence" target="_blank" data-linked-resource-id="196611" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">이하령</a>) + <a class="confluence-userlink user-mention" data-username="70121:412dbc3f-d7b9-4f3c-9dc7-03442e8a60a3" data-account-id="70121:412dbc3f-d7b9-4f3c-9dc7-03442e8a60a3" href="https://swm-fire.atlassian.net/wiki/people/70121:412dbc3f-d7b9-4f3c-9dc7-03442e8a60a3?ref=confluence" target="_blank" data-linked-resource-id="12255254" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://swm-fire.atlassian.net/wiki">WonYong Jeong</a> </p><h2 id="id-2022-07-14-Discussiontopics"><img class="emoticon emoticon-blue-star" data-emoji-id="1f5e3" data-emoji-shortname=":speaking_head:" data-emoji-fallback="\uD83D\uDDE3" src="images/icons/emoticons/72/1f5e3.png" width="16" height="16" data-emoticon-name="blue-star" alt="(파란별)"/> Discussion topics</h2><h3 id="id-2022-07-14-CORS">CORS </h3><p>로컬 호스트 허용해</p><h3 id="id-2022-07-14-GlobalConfig">Global Config</h3><blockquote><p>서버든 클라든 global config를 만들자 </p></blockquote><h3 id="id-2022-07-14-ENV">ENV</h3><blockquote><p>env에 따라 다른 Config값을 써서 다른 주소를 사용하도록 만들자</p></blockquote><p>ENV 종류</p><ul><li><p>Stage</p></li><li><p>Prod</p></li></ul><p>백엔드의 경우 ENV 종류에 따라 다른 ACL 리스트를 사용해라</p><h3 id="id-2022-07-14-프로젝트진행사항">프로젝트 진행 사항</h3><p>공유화면 작동</p><p>입장 설정 </p><p>입장 한 후 화면</p><p>입장 준비 화면 </p><h3 id="id-2022-07-14-프론트엔드코드리뷰">프론트엔드 코드리뷰</h3><h4 id="id-2022-07-14-Auth컴포넌트를감싼다">Auth 컴포넌트를 감싼다</h4><h4 id="id-2022-07-14-모달">모달 </h4><p>모달 속성은 </p><p>BaseLayout 안에서 </p><p>모달이 있으면 띄워져 라고 선언 할 수 있다</p><h4 id="id-2022-07-14-일반적레이아웃구성">일반적 레이아웃 구성</h4><p>항상 들고 다닐 정보를 레이아웃으로 가지고 다닌다 </p><h4 id="id-2022-07-14-모달정보를어떻게끼웁니까?">모달 정보를 어떻게 끼웁니까?</h4><p>컨텍스트 변수로 한다.</p><p>Store는 모든 컴포넌트는 영속되는 것을 가져올 수 있다. 그렇다면 모달이 떠잇는지 아닌지 설정할 수 있다</p><p>해당 스토어에서 Open dialog, Close dialog, (공용으로 사용한 common code)등을 설정한다,</p><h4 id="id-2022-07-14-Main.tsx">Main.tsx</h4><h5 id="id-2022-07-14-정원용멘토님의관점">정원용 멘토님의 관점 </h5><p>스타일이 그 코드가 가진 책임이 무엇이고 거기에 충실한가?</p><h5 id="id-2022-07-14-Main컴포넌의역할은?">Main 컴포넌의 역할은?</h5><blockquote><p>컴포넌트는 리턴을 명료하게 해 주어야 한다.</p></blockquote><ul><li><p>컴포넌트가 주고자 하는 것은 무엇이냐?</p></li><li><p>리턴 대상인 컴포넌트를 명료화해라!</p></li><li><p>컴포넌트는 결국 UI를 그려주는 것이다. <br/>→ UI를 리턴하는 코드가 명료해야 한다</p></li></ul><h3 id="id-2022-07-14-명료화는어떻게하나요?">명료화는 어떻게하나요?</h3><p>책임을 줄여라</p><p /><h3 id="id-2022-07-14-네이밍바꾸기">네이밍 바꾸기</h3><p>헤더Section</p><p>타이틀Section</p><p>LoginSection</p><p>등으로 네임밍을 바꿀 필요가 있다.</p><h4 id="id-2022-07-14-Handler의네이밍">Handler의 네이밍</h4><p>이벤트를 기준으로 생각한다.</p><p>...Handler -&gt; onLogin={,,,handler}</p><blockquote><p>스타일의 차이일 수 있다.</p></blockquote><p>React는 XXX핸들러라고 많이 한다. </p><p>하지만 onXXX가 더 직관적이라고 생각한다.</p><h3 id="id-2022-07-14-모달에관한코드를분리하라">모달에 관한 코드를 분리하라</h3><p>두 가지의 방법</p><ol><li><p>밑에서 다른 컴포넌트</p></li><li><p>그 안에서 만들 수 있다</p></li></ol><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: jscript; gutter: false; theme: Confluence" data-theme="Confluence">// 함수로 추출
+const LoginComponent = isModal ? &lt;Modal onLogin={onLoginClose}&gt; ... &lt;/Modal&gt; : null</pre>
+</div></div><h3 id="id-2022-07-14-Scroll을위한CSS">Scroll을 위한 CSS</h3><p>질문: 엄청 큰 img 어떻게 보일까?</p><p>답: 전체가 노출된다.</p><p>1. body의 heigth을 설정해야 한다.</p><ul><li><p>기본은 0</p></li></ul><p>2. overflow: auto</p><p> line break를 설정하면 x방향 스크롤도 보인다</p><h3 id="id-2022-07-14-Scrolls(LobbySection)">Scrolls(LobbySection)</h3><p>filtering한 것들의 리스트는 변수로 빼주자.</p><p /><h3 id="id-2022-07-14-Store객체">Store 객체</h3><h4 id="id-2022-07-14-상태관리하는라이브러리zustand">상태 관리하는 라이브러리 zustand</h4><p>simple해서 좋네</p><h4 id="id-2022-07-14-멘토님이쓰는것">멘토님이 쓰는 것</h4><p>Redux가 코드를 많이 생성해야 돼서 불편 → Redux Thunk?(리덕스의 코드를 생성해줌)</p><p>이런 컨셉의 훅 모듈을 사용해서 개념(slice)을 만들어 준다.</p><h3 id="id-2022-07-14-Auth로감싸진컴포넌트">Auth로 감싸진 컴포넌트</h3><p>Auth 아래는 Auth된 유저들만 사용할 수 있는 컴포넌트</p><p>로그인 해야되는 페이지와 로그인하지 않아되 되는 페이지가 구분된다. </p><h3 id="id-2022-07-14-칭찬">칭찬</h3><p>styled가 아래에 있는 것 좋아.</p><p>main, scroll도 그렇고 간결하게 책임을 나눠가지려고 한 노력이 보인다.</p><h3 id="id-2022-07-14-코드리뷰정리">코드 리뷰 정리</h3><p>렌더링 되는 항목이 간결한지 봐라</p><p>수도코드 수준까지 간결하게 해라</p><h4 id="id-2022-07-14-팁(서버든클라든)">팁(서버든 클라든)</h4><p>먼저 수도코드를 짜고 시작해라. </p><p>주형이 코드리뷰 때 부스트랩에서 해야할 것 </p><ol><li><p>2. 3. 작성 후 시작했다.</p></li></ol><p>프론트도 똑같이 가능하다.</p><h3 id="id-2022-07-14-백과클라이언트의차이">백과 클라이언트의 차이</h3><p>보는 관점이 다르다. </p><p>왜? 시작점이 다르다</p><h4 id="id-2022-07-14-프론트엔드는UI">프론트엔드는 UI</h4><p>→ UI가 명료하게 나오느냐?</p><p>서버는 로직</p><p>→ 해당 서버 사이드의 로직이 명료하게 보이느냐?</p><hr/><h3 id="id-2022-07-14-HTTP">HTTP</h3><p>HTTPS는 평문을 보여주지 않음.</p><h4 id="id-2022-07-14-HTTP.1">HTTP</h4><ul><li><p>평문 텍스트</p><ul><li><p>크롬은 이쁘게 파싱해준다</p></li></ul></li><li><p>공백 두개로 분리</p><ul><li><p>STATUS / HEADER / BODY</p></li></ul></li><li><p>Keep alive에 따라 연결 바로 끊고 안 끊고가 달라진다</p><ul><li><p>백엔드에서 HTTP 버전에 따라 다르게 설정</p></li></ul></li><li><p>이야기한 메소드와 HTTP 의 버전. ‘/‘ -&gt; URL 경로 로 보인다.</p><ul><li><p>즉 서버 입장에서 root page를 들어갔다는걸 알려줌</p></li></ul></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/43548673/43810817.png?width=680" data-image-src="attachments/43548673/43810817.png" data-height="407" data-width="798" data-unresolved-comment-count="0" data-linked-resource-id="43810817" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Pasted Graphic 1-20220715-033909.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="43548673" data-linked-resource-container-version="3" data-media-id="846e89b5-53c2-4dda-b56a-c88dacf5232a" data-media-type="file"></span><p /><h4 id="id-2022-07-14-telnet을이용한실습">telnet을 이용한 실습</h4><ul><li><p>HTTP를 사용하는 (레거시 지원 때문에) 쇼핑몰 사이트로 실습 시작</p></li><li><p>Request의 헤더에 압축을 받아드일 수 있다는 옵션을 꺼야 제대로 평문으로 보인다 </p><ul><li><p>accept encoding 꺼주고 다시 똑같이 보내면 제대로 나옴 -&gt; 압축되지 않은 정보가 나옴.</p></li></ul></li></ul><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/43548673/43745281.png?width=680" data-image-src="attachments/43548673/43745281.png" data-height="546" data-width="906" data-unresolved-comment-count="0" data-linked-resource-id="43745281" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Pasted Graphic 2-20220715-033908.png" data-base-url="https://swm-fire.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="43548673" data-linked-resource-container-version="3" data-media-id="871155c5-59b3-4e71-9fa5-f361b1c32431" data-media-type="file"></span><p style="margin-left: 30.0px;">1번 섹션 : 보낸 내용</p><p style="margin-left: 30.0px;">2번 섹션 : 받은 내용</p><p style="margin-left: 30.0px;">3번 섹션: body</p><ul><li><p>즉 HTTP는 사람이 읽을 수 있구나! 를 알 수 있음</p></li><li><p>규칙이 있음 -&gt; HTTP scheme, 상태코드 등 2번 섹션에 나옴. 헤더는 엔터 단위로 나온다. 한 줄의 헤더에 공통적으로 ‘:’ 가 나옴. 즉 한 줄에서 colon을 기준으로 key와 value가 나온다. 즉 type -&gt; text html이 존재함</p></li><li><p>헤더에 들어가는 내용이 쭉 포함되어 있다!</p></li><li><p>접속하고 나서, 계속해서 엔터를 쳤는데도 불구하고 끊어지는 표시가 안나옴. 왜? keep-alive 땜시 후속 커넥션을 지속적인 연결을 시도했음</p></li><li><p>빼도 요청이 계속 들어옴… 왜?? 헤더상에는 keep-alive가 빠져있지만, 서버에서는 client가 끊어질 조건이 아니면, 끊지를 않아서 계속 연결이 유지가 되어 있음. 왜? HTTP 1.1 이라서 그럼. HTTP 1.1이면 기본적으로 keep-alive를 지원하기에 그렇다.</p></li></ul><p>HTTP 0.9</p><ul><li><p>GET 만 했는데 헤더 없이 바디가 오면 HTTP 0.9</p></li><li><p>Keep alive가 기본이 아님</p></li><li><p>첫 줄 엔터 치는 순간 바로 끊김</p></li></ul><blockquote><p>서버는 client가 요청하는 버전에 따라 같은 헤더임에도 다를 수 있다.</p></blockquote><p>HTTP 1.1</p><p>사실 CORS는 헤더 하나만 설정하면 끝나</p><h4 id="id-2022-07-14-다음에도이어서실습">다음에도 이어서 실습</h4><p />
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/43548673/43745281.png">Pasted Graphic 2-20220715-033908.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/43548673/43810817.png">Pasted Graphic 1-20220715-033909.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 12월 15, 2022 23:04</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
